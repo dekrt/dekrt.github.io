@@ -23,18 +23,17 @@
   <meta name="description" content="C语言程设作业   contributed by dekrt,2021-11-18  第一次作业：hanoi问题： 代码如下：12345678910111213141516171819202122232425262728#include &lt;stdio.h&gt;#define re register#define il inline int n ;inline void move( int">
 <meta property="og:type" content="article">
 <meta property="og:title" content="homework">
-<meta property="og:url" content="http://dekrt.cn/uncategorized/homework-1/index.html">
+<meta property="og:url" content="http://dekrt.cn/uncategorized/homework/index.html">
 <meta property="og:site_name" content="dekrt&#39;s blog">
 <meta property="og:description" content="C语言程设作业   contributed by dekrt,2021-11-18  第一次作业：hanoi问题： 代码如下：12345678910111213141516171819202122232425262728#include &lt;stdio.h&gt;#define re register#define il inline int n ;inline void move( int">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/oibdh6j8.png">
 <meta property="article:published_time" content="2022-01-14T12:58:05.000Z">
-<meta property="article:modified_time" content="2022-01-14T12:58:45.318Z">
+<meta property="article:modified_time" content="2022-01-14T13:26:44.546Z">
 <meta property="article:author" content="dekrt">
+<meta property="article:tag" content="answer">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/image_hosting/oibdh6j8.png">
 
-<link rel="canonical" href="http://dekrt.cn/uncategorized/homework-1/">
+<link rel="canonical" href="http://dekrt.cn/uncategorized/homework/">
 
 
 <script id="page-configurations">
@@ -168,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dekrt.cn/uncategorized/homework-1/">
+    <link itemprop="mainEntityOfPage" href="http://dekrt.cn/uncategorized/homework/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -192,10 +191,17 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-01-14 20:58:05 / 修改时间：20:58:45" itemprop="dateCreated datePublished" datetime="2022-01-14T20:58:05+08:00">2022-01-14</time>
+              <time title="创建时间：2022-01-14 20:58:05 / 修改时间：21:26:44" itemprop="dateCreated datePublished" datetime="2022-01-14T20:58:05+08:00">2022-01-14</time>
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -213,7 +219,6 @@
 </blockquote>
 <h2 id="第一次作业："><a href="#第一次作业：" class="headerlink" title="第一次作业："></a>第一次作业：</h2><h4 id="hanoi问题："><a href="#hanoi问题：" class="headerlink" title="hanoi问题："></a>hanoi问题：</h4><ul>
 <li>代码如下：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> il inline </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n ;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">( <span class="keyword">int</span> n , <span class="keyword">char</span> a , <span class="keyword">char</span> b , <span class="keyword">char</span> c )</span></span></span><br><span class="line"><span class="function"><span class="comment">//将a上的n块借助b移动到c上去</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> cnt = <span class="number">1</span> ;</span><br><span class="line">    <span class="keyword">if</span> ( n == <span class="number">1</span> ) </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;step %3d : move %c to %c\n&quot;</span>, cnt++ , a , c ) ;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    move ( n<span class="number">-1</span> , a , c , b ) ;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;step %3d : move %c to %c\n&quot;</span>, cnt++ , a , c ) ;</span><br><span class="line">    move ( n<span class="number">-1</span> , b , a , c ) ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Input the number of diskes you want to move:&quot;</span>) ;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n) ;</span><br><span class="line">    move ( n , <span class="string">&#x27;a&#x27;</span> , <span class="string">&#x27;b&#x27;</span> , <span class="string">&#x27;c&#x27;</span> ) ;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>线程示意图如下：<br><img src="https://cdn.luogu.com.cn/upload/image_hosting/oibdh6j8.png"></li>
 </ul>
 <h4 id="上楼梯问题："><a href="#上楼梯问题：" class="headerlink" title="上楼梯问题："></a>上楼梯问题：</h4><ul>
 <li>递归解法：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> il inline </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n ;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">move</span><span class="params">( <span class="keyword">int</span> n )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ( n == <span class="number">1</span> ) <span class="keyword">return</span> <span class="number">1</span> ;</span><br><span class="line">    <span class="keyword">if</span> ( n == <span class="number">2</span> ) <span class="keyword">return</span> <span class="number">2</span> ;</span><br><span class="line">    <span class="keyword">if</span> ( n &gt;= <span class="number">3</span> ) <span class="keyword">return</span> move(n - <span class="number">1</span>) + move(n - <span class="number">2</span>) ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n) ;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,move(n)) ;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
@@ -236,6 +241,26 @@
     
     
     
+        <div class="reward-container">
+  <div>您的支持是我最大的动力!</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="dekrt 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="dekrt 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
         
 
 <div>
@@ -245,7 +270,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://dekrt.cn/uncategorized/homework-1/" title="homework">http://dekrt.cn/uncategorized/homework-1/</a>
+    <a href="http://dekrt.cn/uncategorized/homework/" title="homework">http://dekrt.cn/uncategorized/homework/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -255,6 +280,9 @@
 
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/answer/" rel="tag"># answer</a>
+          </div>
 
         
 
@@ -265,7 +293,10 @@
     <a href="/uncategorized/Introduction/" rel="prev" title="一篇介绍 | A Introduction">
       <i class="fa fa-chevron-left"></i> 一篇介绍 | A Introduction
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/uncategorized/problems/" rel="next" title="problems">
+      problems <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -340,12 +371,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -412,8 +443,56 @@
   </div>
 
 
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
