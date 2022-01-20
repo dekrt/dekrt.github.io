@@ -3,11 +3,11 @@
   <title>dekrt&#39;s blog</title>
   
   <subtitle>菜菜，呜呜</subtitle>
-  <link href="http://dekrt.cn/atom.xml" rel="self"/>
+  <link href="https://dekrt.cn/atom.xml" rel="self"/>
   
-  <link href="http://dekrt.cn/"/>
+  <link href="https://dekrt.cn/"/>
   <updated>2022-01-18T11:49:47.303Z</updated>
-  <id>http://dekrt.cn/</id>
+  <id>https://dekrt.cn/</id>
   
   <author>
     <name>dekrt</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>C语言课后习题&amp;头歌答案</title>
-    <link href="http://dekrt.cn/answer/problems/"/>
-    <id>http://dekrt.cn/answer/problems/</id>
+    <link href="https://dekrt.cn/answer/problems/"/>
+    <id>https://dekrt.cn/answer/problems/</id>
     <published>2022-01-14T13:27:44.000Z</published>
     <updated>2022-01-18T11:49:47.303Z</updated>
     
@@ -34,17 +34,17 @@ src=&quot;https://cdn.luogu.com.cn/upload/image_hosting/9v7j75wu.png&quot; /&gt;
     
     
     
-    <category term="answer" scheme="http://dekrt.cn/categories/answer/"/>
+    <category term="answer" scheme="https://dekrt.cn/categories/answer/"/>
     
     
-    <category term="answer" scheme="http://dekrt.cn/tags/answer/"/>
+    <category term="answer" scheme="https://dekrt.cn/tags/answer/"/>
     
   </entry>
   
   <entry>
     <title>C语言程设作业</title>
-    <link href="http://dekrt.cn/answer/homework/"/>
-    <id>http://dekrt.cn/answer/homework/</id>
+    <link href="https://dekrt.cn/answer/homework/"/>
+    <id>https://dekrt.cn/answer/homework/</id>
     <published>2022-01-14T12:58:05.000Z</published>
     <updated>2022-01-18T11:45:18.446Z</updated>
     
@@ -60,17 +60,17 @@ src=&quot;https://cdn.luogu.com.cn/upload/image_hosting/9v7j75wu.png&quot; /&gt;
     
     
     
-    <category term="answer" scheme="http://dekrt.cn/categories/answer/"/>
+    <category term="answer" scheme="https://dekrt.cn/categories/answer/"/>
     
     
-    <category term="answer" scheme="http://dekrt.cn/tags/answer/"/>
+    <category term="answer" scheme="https://dekrt.cn/tags/answer/"/>
     
   </entry>
   
   <entry>
     <title>一篇介绍 | A Introduction</title>
-    <link href="http://dekrt.cn/introduction/Introduction/"/>
-    <id>http://dekrt.cn/introduction/Introduction/</id>
+    <link href="https://dekrt.cn/introduction/Introduction/"/>
+    <id>https://dekrt.cn/introduction/Introduction/</id>
     <published>2022-01-13T04:14:05.000Z</published>
     <updated>2022-01-18T11:58:46.072Z</updated>
     
@@ -88,10 +88,10 @@ src=&quot;http://ipcounter.ihcr.top/?&amp;amp;qq=(1044382753)&amp;amp;gh=(dekrt)
     
     
     
-    <category term="introduction" scheme="http://dekrt.cn/categories/introduction/"/>
+    <category term="introduction" scheme="https://dekrt.cn/categories/introduction/"/>
     
     
-    <category term="introduction" scheme="http://dekrt.cn/tags/introduction/"/>
+    <category term="introduction" scheme="https://dekrt.cn/tags/introduction/"/>
     
   </entry>
   
