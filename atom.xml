@@ -6,7 +6,7 @@
   <link href="https://dekrt.cn/atom.xml" rel="self"/>
   
   <link href="https://dekrt.cn/"/>
-  <updated>2022-01-26T14:03:20.664Z</updated>
+  <updated>2022-02-10T10:01:50.455Z</updated>
   <id>https://dekrt.cn/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一点点人工智能</title>
+    <link href="https://dekrt.cn/note/ai1-1/"/>
+    <id>https://dekrt.cn/note/ai1-1/</id>
+    <published>2022-02-10T09:10:04.000Z</published>
+    <updated>2022-02-10T10:01:50.455Z</updated>
+    
+    <content type="html"><![CDATA[<figure><img src="/note/ai1-1/cover.jpg" alt="见证一个人工智能的诞生"><figcaption aria-hidden="true">见证一个人工智能的诞生</figcaption></figure><blockquote><p>当代生活，谁还不会来两句人工智能，深度学习呢？</p></blockquote><p>机器学习正给世界带来重大影响。小区门口的人脸识别开锁、手机里的信息流推荐、路上的自动驾驶，这一切技术的背后都是机器学习。</p><p>这个系列打开了人工智能的黑盒。从现在开始，借助于让人连连称赞的建模，理解人工智能。</p><span id="more"></span><h1 id="识别数字">识别数字</h1><h2 id="part-1-输入数据库-input-database">Part 1 ：输入数据库 | inputdatabase</h2><p>顾名思义，从<strong>识别数字</strong>来引入机器学习。 <img src="/note/ai1-1/pic1-1.png" alt="识别数字">为了做到这一点，我们做的第一件事就是将图片转化为数字，这就需要用到<strong>MNIST数据库</strong>。<img src="/note/ai1-1/pic1-2.png">数据库经过了特殊的处理，每一个图片都是28*28像素(pixel)，每一个pixel存储着这个像素点的灰度，即明暗信息，通常用1byte(8bit)来存储，范围为0-255。<strong>灰度为0为纯黑，灰度为255为纯白</strong>。<img src="/note/ai1-1/pic1-3.png" alt="MNIST数据库"> 如此，我们就把这<span class="math inline">\(28\times28=784\)</span>个灰度信息组成一个<strong>向量(vector)</strong>,n维的向量可以理解为定义在一个n维坐标系中的点。<img src="/note/ai1-1/pic1-4.png" alt="三维向量"> <img src="/note/ai1-1/pic1-5.png" alt="784维向量">每个数字的特征灰度不同，将这个784维的向量放置到784维的坐标系中就会形成不同的集合(set)，用以区分不同的数字。</p><p>接下来要做的就很简单：我们只需要让机器画一条线，让这两个集合分开，在二维坐标系中这十分容易，三维空间就需要二维平面分成两块，而784维空间就需要783维的<strong>超平面</strong>进行分割，用<strong>感知器公式</strong>可以进行如下表示：<span class="math display">\[\sum_{i=1}^{784}W_i\times X_i+b=0\]</span>即 <span class="math display">\[W_1\times X_1+W_2\timesX_2+\dots+W_{784}\times X_{784}+b=0\]</span> 这里的<span class="math inline">\(X_i\)</span>代表着对应像素的灰度信息，每个像素点有自己对应的权重<span class="math inline">\(W_i\)</span>,b代表阈值，对W和b进行调整，就能改变超平面的位置。<img src="/note/ai1-1/pic1-6.png" alt="二维平面分割"> 我们通过比较<span class="math inline">\(\sum_{i=1}^{784}W_i\timesX_i\)</span>与阈值b的大小，就可以让机器完成分类。 ## Part 2 : 训练感知器| training perceptron <img src="/note/ai1-1/pic1-7.png" alt="784维示意">通过<strong>以后会了解到的算法</strong>我们可以让机器通过不断地学习，自动的调整权重和阈值，达到识别数字的目的。</p><p><img src="/note/ai1-1/pic1-9.png"></p><p>更高清的图片所处的维度更高，所用的方法也类似</p>]]></content>
+    
+    
+    <summary type="html">&lt;figure&gt;
+&lt;img src=&quot;/note/ai1-1/cover.jpg&quot; alt=&quot;见证一个人工智能的诞生&quot;&gt;
+&lt;figcaption aria-hidden=&quot;true&quot;&gt;见证一个人工智能的诞生&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当代生活，谁还不会来两句人工智能，深度学习呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;机器学习正给世界带来重大影响。小区门口的人脸识别开锁、手机里的信息流推荐、路上的自动驾驶，这一切技术的背后都是机器学习。&lt;/p&gt;
+&lt;p&gt;这个系列打开了人工智能的黑盒。从现在开始，借助于让人连连称赞的建模，理解人工智能。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="note" scheme="https://dekrt.cn/categories/note/"/>
+    
+    
+    <category term="人工智能 | ai" scheme="https://dekrt.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-ai/"/>
+    
+    <category term="笔记 | note" scheme="https://dekrt.cn/tags/%E7%AC%94%E8%AE%B0-note/"/>
+    
+  </entry>
   
   <entry>
     <title>慕课 &amp; U校园自动答题脚本使用教程</title>
@@ -46,7 +77,7 @@
     <link href="https://dekrt.cn/note/git/"/>
     <id>https://dekrt.cn/note/git/</id>
     <published>2022-01-26T07:09:00.000Z</published>
-    <updated>2022-01-26T14:00:07.323Z</updated>
+    <updated>2022-02-10T08:52:25.824Z</updated>
     
     <content type="html"><![CDATA[<h1 id="写在前面">写在前面</h1><p>git是一种<strong>非常好用</strong>的分布式版本控制系统，操作简洁，功能强大，依托于<a href="www.github.com">github</a>等平台实现了非常强大且完善的代码管理，大大提高了工作效率。</p><p>关于学习git，网上有很多的视频与教程。但需要注意的是，git说到底是一种工具，在使用中不断学习与摸索还是我比较推崇的一种做法，<strong>亲自动手比单纯的学习要更加重要</strong>。</p><p>本文只会浅谈git和相关知识，大部分会一笔带过，<del>其实主要是给自己看的</del>。想要深入了解，还请移步<a href="https://www.liaoxuefeng.com/">廖雪峰的博客</a>或者自行查找相关资料</p><span id="more"></span><h1 id="基础命令">基础命令</h1><ul><li><strong>git中复制是<kbd>Ctrl</kbd>+<kbd>insert</kbd>，粘贴是<kbd>shift</kbd>+<kbd>insert</kbd></strong></li></ul><h2 id="绑定github">绑定Github：</h2><ol type="1"><li>生成SSH密钥：<code>$ ssh-keygen -t rsa</code></li><li>前往GitHub添加SSH密钥</li><li>利用<code>$ ssh -T git@github.com</code>检验是否成功</li><li>使用下列命令配置环境 <figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.name</span> <span class="string">&quot;dekrt&quot;</span></span><br><span class="line">$ git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.email</span> <span class="string">&quot;dekrt@qq.com&quot;</span></span><br></pre></td></tr></table></figure></li></ol><h2 id="提交文件">提交文件：</h2><h3 id="通用命令">通用命令：</h3><ul><li>使用<code>$ git add &lt;file&gt;</code>命令 添加文件到暂存区<ul><li>使用<code>$ git add *</code>命令 添加全部文件</li></ul></li><li>使用<code>$ git commit -m &lt;message&gt;</code>命令提交本地修改到本地仓库<ul><li>commit：承诺、保证做某事</li><li>其中<code>&lt;message&gt;</code>代表对更新的描述</li></ul></li><li>使用<code>$ git status</code>命令 查看仓库的状态</li><li>使用<code>$ git diff</code>命令 查看修改内容<ul><li>diff -&gt; diffrence 差异 &gt;Github已经将默认的master修改为main，使用有关命令时应注意对应。</li></ul></li></ul><h3 id="从github上clone">从github上clone：</h3><ul><li>使用<code>$ git clone &lt;repo&gt;</code>命令 克隆仓库到本地</li><li>使用<code>$ git push originmaster</code>命令，将本地仓库提交到远程仓库</li></ul><h3 id="从本地新建">从本地新建：</h3><ul><li>使用<code>$ git init</code> 命令 初始化repository</li><li>使用<code>$ git remote add origin &lt;url&gt;</code>命令关联远程仓库</li><li>使用<code>$ git pull origin master</code>命令同步远程仓库和本地仓库，</li></ul><p>……未完待续</p>]]></content>
     
@@ -61,9 +92,9 @@
     <category term="note" scheme="https://dekrt.cn/categories/note/"/>
     
     
-    <category term="git" scheme="https://dekrt.cn/tags/git/"/>
-    
     <category term="笔记 | note" scheme="https://dekrt.cn/tags/%E7%AC%94%E8%AE%B0-note/"/>
+    
+    <category term="git" scheme="https://dekrt.cn/tags/git/"/>
     
   </entry>
   
