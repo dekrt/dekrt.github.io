@@ -24,12 +24,12 @@
     var CONFIG = {"hostname":"dekrt.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="写在前面git是一种非常好用的分布式版本控制系统，操作简洁，功能强大，依托于github等平台实现了非常强大且完善的代码管理，大大提高了工作效率。 关于学习git，网上有很多的视频与教程。但需要注意的是，git说到底是一种工具，在使用中不断学习与摸索还是我比较推崇的一种做法，亲自动手比单纯的学习要更加重要。 本文只会浅谈git和相关知识，大部分会一笔带过，其实主要是给自己看的。想要深入了解，还请移">
+  <meta name="description" content="写在前面 git是一种非常好用的分布式版本控制系统，操作简洁，功能强大，依托于github等平台实现了非常强大且完善的代码管理，大大提高了工作效率。 关于学习git，网上有很多的视频与教程。但需要注意的是，git说到底是一种工具，在使用中不断学习与摸索还是我比较推崇的一种做法，亲自动手比单纯的学习要更加重要。 本文只会浅谈git和相关知识，大部分会一笔带过，其实主要是给自己看的。想要深入了解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git总结">
 <meta property="og:url" content="https://dekrt.cn/note/git/index.html">
 <meta property="og:site_name" content="dekrt&#39;s blog">
-<meta property="og:description" content="写在前面git是一种非常好用的分布式版本控制系统，操作简洁，功能强大，依托于github等平台实现了非常强大且完善的代码管理，大大提高了工作效率。 关于学习git，网上有很多的视频与教程。但需要注意的是，git说到底是一种工具，在使用中不断学习与摸索还是我比较推崇的一种做法，亲自动手比单纯的学习要更加重要。 本文只会浅谈git和相关知识，大部分会一笔带过，其实主要是给自己看的。想要深入了解，还请移">
+<meta property="og:description" content="写在前面 git是一种非常好用的分布式版本控制系统，操作简洁，功能强大，依托于github等平台实现了非常强大且完善的代码管理，大大提高了工作效率。 关于学习git，网上有很多的视频与教程。但需要注意的是，git说到底是一种工具，在使用中不断学习与摸索还是我比较推崇的一种做法，亲自动手比单纯的学习要更加重要。 本文只会浅谈git和相关知识，大部分会一笔带过，其实主要是给自己看的。想要深入了解">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-26T07:09:00.000Z">
 <meta property="article:modified_time" content="2022-02-10T08:52:25.824Z">
@@ -268,7 +268,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>872</span>
+              <span>876</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -287,47 +287,55 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>git是一种<strong>非常好用</strong>的分布式版本控制系统，操作简洁，功能强大，依托于<a href="www.github.com">github</a>等平台实现了非常强大且完善的代码管理，大大提高了工作效率。</p>
+        <h1 id="写在前面">写在前面</h1>
+<p>git是一种<strong>非常好用</strong>的分布式版本控制系统，操作简洁，功能强大，依托于<a href="www.github.com">github</a>等平台实现了非常强大且完善的代码管理，大大提高了工作效率。</p>
 <p>关于学习git，网上有很多的视频与教程。但需要注意的是，git说到底是一种工具，在使用中不断学习与摸索还是我比较推崇的一种做法，<strong>亲自动手比单纯的学习要更加重要</strong>。</p>
 <p>本文只会浅谈git和相关知识，大部分会一笔带过，<del>其实主要是给自己看的</del>。想要深入了解，还请移步<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/">廖雪峰的博客</a>或者自行查找相关资料</p>
 <span id="more"></span>
-<h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><ul>
+<h1 id="基础命令">基础命令</h1>
+<ul>
 <li><strong>git中复制是<kbd>Ctrl</kbd>+<kbd>insert</kbd>，粘贴是<kbd>shift</kbd>+<kbd>insert</kbd></strong></li>
 </ul>
-<h2 id="绑定Github："><a href="#绑定Github：" class="headerlink" title="绑定Github："></a>绑定Github：</h2><ol>
+<h2 id="绑定github">绑定Github：</h2>
+<ol type="1">
 <li>生成SSH密钥：<code>$ ssh-keygen -t rsa</code></li>
 <li>前往GitHub添加SSH密钥</li>
 <li>利用<code>$ ssh -T git@github.com</code>检验是否成功</li>
-<li>使用下列命令配置环境<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.name</span> <span class="string">&quot;dekrt&quot;</span></span><br><span class="line">$ git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.email</span> <span class="string">&quot;dekrt@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>使用下列命令配置环境 <figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.name</span> <span class="string">&quot;dekrt&quot;</span></span><br><span class="line">$ git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.email</span> <span class="string">&quot;dekrt@qq.com&quot;</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="提交文件："><a href="#提交文件：" class="headerlink" title="提交文件："></a>提交文件：</h2><h3 id="通用命令："><a href="#通用命令：" class="headerlink" title="通用命令："></a>通用命令：</h3><ul>
-<li>使用<code>$ git add &lt;file&gt;</code>命令 添加文件到暂存区<ul>
+<h2 id="提交文件">提交文件：</h2>
+<h3 id="通用命令">通用命令：</h3>
+<ul>
+<li>使用<code>$ git add &lt;file&gt;</code>命令 添加文件到暂存区
+<ul>
 <li>使用<code>$ git add *</code>命令 添加全部文件</li>
-</ul>
-</li>
-<li>使用<code>$ git commit -m &lt;message&gt;</code>命令 提交本地修改到本地仓库<ul>
+</ul></li>
+<li>使用<code>$ git commit -m &lt;message&gt;</code>命令
+提交本地修改到本地仓库
+<ul>
 <li>commit：承诺、保证做某事</li>
 <li>其中<code>&lt;message&gt;</code>代表对更新的描述</li>
-</ul>
-</li>
+</ul></li>
 <li>使用<code>$ git status</code>命令 查看仓库的状态</li>
-<li>使用<code>$ git diff</code>命令 查看修改内容<ul>
-<li>diff -&gt; diffrence 差异<blockquote>
-<p>Github已经将默认的master修改为main，使用有关命令时应注意对应。</p>
-</blockquote>
-</li>
+<li>使用<code>$ git diff</code>命令 查看修改内容
+<ul>
+<li>diff -&gt; diffrence 差异 &gt;
+Github已经将默认的master修改为main，使用有关命令时应注意对应。</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="从github上clone："><a href="#从github上clone：" class="headerlink" title="从github上clone："></a>从github上clone：</h3><ul>
+<h3 id="从github上clone">从github上clone：</h3>
+<ul>
 <li>使用<code>$ git clone &lt;repo&gt;</code>命令 克隆仓库到本地</li>
-<li>使用<code>$ git push origin master</code>命令，将本地仓库提交到远程仓库</li>
+<li>使用<code>$ git push origin
+master</code>命令，将本地仓库提交到远程仓库</li>
 </ul>
-<h3 id="从本地新建："><a href="#从本地新建：" class="headerlink" title="从本地新建："></a>从本地新建：</h3><ul>
+<h3 id="从本地新建">从本地新建：</h3>
+<ul>
 <li>使用<code>$ git init</code> 命令 初始化repository</li>
-<li>使用<code>$ git remote add origin &lt;url&gt;</code>命令 关联远程仓库</li>
-<li>使用<code>$ git pull origin master</code>命令 同步远程仓库和本地仓库，</li>
+<li>使用<code>$ git remote add origin &lt;url&gt;</code>命令
+关联远程仓库</li>
+<li>使用<code>$ git pull origin master</code>命令
+同步远程仓库和本地仓库，</li>
 </ul>
 <p>……未完待续</p>
 
@@ -463,7 +471,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">基础命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%91%E5%AE%9AGithub%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">绑定Github：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="nav-number">2.2.</span> <span class="nav-text">提交文件：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E7%94%A8%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="nav-number">2.2.1.</span> <span class="nav-text">通用命令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8Egithub%E4%B8%8Aclone%EF%BC%9A"><span class="nav-number">2.2.2.</span> <span class="nav-text">从github上clone：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8E%E6%9C%AC%E5%9C%B0%E6%96%B0%E5%BB%BA%EF%BC%9A"><span class="nav-number">2.2.3.</span> <span class="nav-text">从本地新建：</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">基础命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%91%E5%AE%9Agithub"><span class="nav-number">2.1.</span> <span class="nav-text">绑定Github：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">提交文件：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.1.</span> <span class="nav-text">通用命令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8Egithub%E4%B8%8Aclone"><span class="nav-number">2.2.2.</span> <span class="nav-text">从github上clone：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8E%E6%9C%AC%E5%9C%B0%E6%96%B0%E5%BB%BA"><span class="nav-number">2.2.3.</span> <span class="nav-text">从本地新建：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -566,13 +574,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">123k</span>
+    <span title="站点总字数">124k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:52</span>
+    <span title="站点阅读时长">1:53</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

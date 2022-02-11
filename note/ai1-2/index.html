@@ -24,12 +24,12 @@
     var CONFIG = {"hostname":"dekrt.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="用横坐标代表身长，纵坐标代表体重，在坐标系中标出鳄鱼和蛇。我们要做的，就是画一条线把他们两个分开。">
+  <meta name="description" content="用横坐标代表身长，纵坐标代表体重，在坐标系中标出鳄鱼和蛇。  我们要做的，就是画一条线把他们两个分开。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2 鳄鱼与蛇">
 <meta property="og:url" content="https://dekrt.cn/note/ai1-2/index.html">
 <meta property="og:site_name" content="dekrt&#39;s blog">
-<meta property="og:description" content="用横坐标代表身长，纵坐标代表体重，在坐标系中标出鳄鱼和蛇。我们要做的，就是画一条线把他们两个分开。">
+<meta property="og:description" content="用横坐标代表身长，纵坐标代表体重，在坐标系中标出鳄鱼和蛇。  我们要做的，就是画一条线把他们两个分开。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dekrt.cn/note/ai1-2/pic1-2-1.png">
 <meta property="og:image" content="https://dekrt.cn/note/ai1-2/pic1-2-2.png">
@@ -268,7 +268,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>928</span>
+              <span>962</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -287,24 +287,31 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>用横坐标代表身长，纵坐标代表体重，在坐标系中标出鳄鱼和蛇。<br><img src="/note/ai1-2/pic1-2-1.png" alt="鳄鱼和蛇"><br>我们要做的，就是画一条线把他们两个分开。<br><span id="more"></span><br><img src="/note/ai1-2/pic1-2-2.png" alt><br>非常的简单，对不对？</p>
+        <p>用横坐标代表身长，纵坐标代表体重，在坐标系中标出鳄鱼和蛇。 <img src="/note/ai1-2/pic1-2-1.png" alt="鳄鱼和蛇">
+我们要做的，就是画一条线把他们两个分开。 <span id="more"></span> <img src="/note/ai1-2/pic1-2-2.png"> 非常的简单，对不对？</p>
 <p>很容易知道，W改变的是斜率，而b改变的是位置。</p>
 <p>这个问题的本质是分类，<strong>而分类就是智能的源头</strong>。</p>
 <p>神经元，阈值，权重，正好跟生物知识一一对应。我们也可以把他抽象成数学知识。</p>
-<p><img src="/note/ai1-2/pic1-2-3.png" alt></p>
-<p>如果$f(x)&gt;b$,即输入信号大于阈值，输出为1，反之为0。</p>
+<p><img src="/note/ai1-2/pic1-2-3.png"></p>
+<p>如果<span class="math inline">\(f(x)&gt;b\)</span>,即输入信号大于阈值，输出为1，反之为0。</p>
 <p>之后涉及到的所有复杂神经网络，都是由这样的神经元所组成的。我们只要让它开始学习就好了。</p>
 <p>流程很简单：<strong>输入，识别，输出，判断</strong></p>
-<p><img src="/note/ai1-2/pic1-2-4.png" alt></p>
+<p><img src="/note/ai1-2/pic1-2-4.png"></p>
 <p>让我们回到鳄鱼和蛇的问题：输入特征就是输入动物的身长和体重，识别特征就是将数据乘以对应的权重并相加，输出结果就是将f(x)与阈值b进行比较，大于阈值输出1，小于阈值输出0，再与已知的数据进行比较，判断对错：<strong>而判断对错，正是机器学习的核心环节</strong>。</p>
 <p>现在，我们把输出结果命名为y，目标值为Y，只有y和Y都是0或者1，结果才正确，不一样就是错误。</p>
 <p>而机器学习，就是通过不断调整权重W和阈值b，来让结果尽可能的正确。</p>
-<p><img src="/note/ai1-2/pic1-2-5.png" alt></p>
+<p><img src="/note/ai1-2/pic1-2-5.png"></p>
 <p>用数学语言描述刚刚的过程，可概括为如下公式：</p>
-<script type="math/tex; mode=display">W_{i(t+1)}=W_{i(t)}+\Delta W_i</script><p>很容易想到，让机器自动调整的关键就是让机器知道$W_i$是大了还是小了。而Y是真实值，y是输出值，如果Y与y一样，则$Y-y=0$，使得$\Delta W_i = 0$，$W_i$不调整;如果$Y-y=1$，则真实值比输出值偏大，要提高$W_i$让$f(x)&gt;b$才能达成目的，反之亦然。同时，还需要乘以$X_i$，这个点的X越大，对整个函数的影响也要越明显，所以我们列出以下式子：</p>
-<p>(r是机器的学习率，可参见梯度下降的有关知识)</p>
-<script type="math/tex; mode=display">\Delta W_i = (Y-y)\times X_i \times r</script><script type="math/tex; mode=display">W_{i(t+1)}=W_{i(t)}+(Y-y)\times X_i \times r</script><p>同时，b也要进行相应调整：</p>
-<script type="math/tex; mode=display">\Delta b = (Y-y)\times 1 \times r</script><p>早在1957年，Frank Rosenblatt就发明了这种感知器，但他存在一个致命的缺陷：很多数据无法用一条直线，一个平面甚至一个超平面分开，而这就涉及到<strong>变换坐标系</strong>的有关知识，而它与<strong>线性代数 | Linear Algebra</strong>又紧密相联。</p>
+<p><span class="math display">\[W_{i(t+1)}=W_{i(t)}+\Delta
+W_i\]</span></p>
+<p>很容易想到，让机器自动调整的关键就是让机器知道<span class="math inline">\(W_i\)</span>是大了还是小了。而Y是真实值，y是输出值，如果Y与y一样，则<span class="math inline">\(Y-y=0\)</span>，使得<span class="math inline">\(\Delta W_i = 0\)</span>，<span class="math inline">\(W_i\)</span>不调整;如果<span class="math inline">\(Y-y=1\)</span>，则真实值比输出值偏大，要提高<span class="math inline">\(W_i\)</span>让<span class="math inline">\(f(x)&gt;b\)</span>才能达成目的，反之亦然。同时，还需要乘以<span class="math inline">\(X_i\)</span>，这个点的X越大，对整个函数的影响也要越明显，所以我们列出以下式子：</p>
+<p>(r是机器的学习率，可参见梯度下降的有关知识) <span class="math display">\[\Delta W_i = (Y-y)\times X_i \times r\]</span>
+<span class="math display">\[W_{i(t+1)}=W_{i(t)}+(Y-y)\times X_i \times
+r\]</span> 同时，b也要进行相应调整： <span class="math display">\[\Delta
+b = (Y-y)\times 1 \times r\]</span></p>
+<p>早在1957年，Frank
+Rosenblatt就发明了这种感知器，但他存在一个致命的缺陷：很多数据无法用一条直线，一个平面甚至一个超平面分开，而这就涉及到<strong>变换坐标系</strong>的有关知识，而它与<strong>线性代数
+| Linear Algebra</strong>又紧密相联。</p>
 
     </div>
 
@@ -376,8 +383,8 @@
       <i class="fa fa-chevron-left"></i> 1 一点点人工智能
     </a></div>
       <div class="post-nav-item">
-    <a href="/note/ai1-3/" rel="next" title="3 加一层">
-      3 加一层 <i class="fa fa-chevron-right"></i>
+    <a href="/note/ai1-2.5/" rel="next" title="2.5 一点点矩阵">
+      2.5 一点点矩阵 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -540,13 +547,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">123k</span>
+    <span title="站点总字数">124k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:52</span>
+    <span title="站点阅读时长">1:53</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
