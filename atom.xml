@@ -6,7 +6,7 @@
   <link href="https://dekrt.cn/atom.xml" rel="self"/>
   
   <link href="https://dekrt.cn/"/>
-  <updated>2022-02-11T12:41:17.218Z</updated>
+  <updated>2022-02-12T14:27:16.298Z</updated>
   <id>https://dekrt.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ai1-5</title>
+    <link href="https://dekrt.cn/note/ai1-5/"/>
+    <id>https://dekrt.cn/note/ai1-5/</id>
+    <published>2022-02-11T12:43:16.000Z</published>
+    <updated>2022-02-12T14:27:16.298Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文含大量的数学公式，全部采用mathjax渲染。</p></blockquote><p>如果要求损失函数对九个变量的偏导数，我们首先需要做一些准备工作：</p><p><img src="/note/ai1-5/pic1-5-1.png"></p><span id="more"></span><p>我们可以先给权重和阈值随便设置一下初始值，再来考虑激活函数：</p><p><img src="/note/ai1-5/pic1-5-2.png"></p><p>注意：这里不能采用阶跃函数：因为阶跃函数除了原点不可导，其他点的导数为0，无法做梯度下降。我们暂时采用逻辑函数：</p><p><span class="math display">\[\sigma (x)=\frac{1}{1+e^{-x}}\]</span></p><p>给定一组输入(1,0)我们就可以填出图中所有的空，并且可以算出他的损失值：</p><p><img src="/note/ai1-5/pic1-5-3.png"></p><p>这个过程，我们称之为<strong>前向传播(ForwardPropagation)</strong>,即从左往右将训练送入网络以获得激励响应。</p><p>与之类似，我们有<strong>反向传播(BackwardPropagation)</strong>，即“误差反向传播”的简称，该方法对网络中所有函数计算损失函数的梯度，这个梯度会反馈给最优化方法，用来更新权值以最小化损失函数。</p><p>从图上来看，就是从损失值C出发来推算W和b要改变的量。具体的做法就是在九个变量上做梯度下降，即求C对九个变量的<strong>偏导数</strong>。</p><p><img src="/note/ai1-5/pic1-5-4.png"></p><p>这就需要用到<strong>链式法则</strong>来求复合函数的导数。</p><p><span class="math display">\[\dfrac{\partial C}{\partialb_3}=\dfrac{dc}{dy}\dfrac{dy}{dz_3}\dfrac{\partial z_3}{\partialb_3}\]</span></p><p>注意到：</p><p><span class="math display">\[c=\frac{1}{2N}\sum|Y-y|^2=\frac{1}{2}(Y-y)^2\]</span></p><p>有：</p><p><span class="math display">\[\dfrac{dc}{dy}=\frac{1}{2}\times(-2)\times (Y-y) =0.84-1=-0.16\]</span></p><p><span class="math display">\[\frac{dy}{dz_3}=\frac{d(sigmoid(z_3))}{d(z_3)}=y(1-y)=0.84\times(1-0.84) = 0.13\]</span></p><p>而：</p><p><span class="math display">\[z_3 = h_1 \times w_5 + h_2 \times w_6 +b_3\]</span></p><p>求偏导数得：</p><p><span class="math display">\[\dfrac{\partial z_3}{\partialb_3}=1\]</span></p><p>综合得:</p><p><span class="math display">\[\dfrac{\partial C}{\partialb_3}=\dfrac{dc}{dy}\dfrac{dy}{dz_3}\dfrac{\partial z_3}{\partialb_3}=-0.16\times 0.13 \times 1 = -0.020\]</span></p><p>同理：我们可以计算出其他得偏导数。</p><p>举个例子：</p><p><span class="math display">\[\begin{aligned}\dfrac{\partial C}{\partialw_1}&amp;=\dfrac{dc}{dy}\dfrac{dy}{dz_3}\dfrac{\partial z_3}{\partialh_1}\dfrac{\partial h_1}{\partial z_1}\dfrac{\partial z_1}{\partialw_1}\\&amp;=-0.16\times0.13\times0.50\times0.21\times1\\&amp;=-0.002    \end{aligned}\]</span></p><p>而求完这九个偏导数，注意到我们只完成了一个数据点。</p><p>处理完四个点之后，我们需要给每个变量得偏导数<strong>求平均</strong>，再<strong>乘上步长</strong>，这就是一次迭代中这个变量应该改变的量，也可以让四个例子的结果更为准确。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文含大量的数学公式，全部采用mathjax渲染。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果要求损失函数对九个变量的偏导数，我们首先需要做一些准备工作：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/note/ai1-5/pic1-5-1.png&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="note" scheme="https://dekrt.cn/categories/note/"/>
+    
+    
+    <category term="人工智能 | ai" scheme="https://dekrt.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-ai/"/>
+    
+    <category term="笔记 | note" scheme="https://dekrt.cn/tags/%E7%AC%94%E8%AE%B0-note/"/>
+    
+  </entry>
   
   <entry>
     <title>4 梯度下降</title>
@@ -46,9 +73,9 @@
     <link href="https://dekrt.cn/note/ai1-3/"/>
     <id>https://dekrt.cn/note/ai1-3/</id>
     <published>2022-02-10T14:30:40.000Z</published>
-    <updated>2022-02-11T10:01:45.628Z</updated>
+    <updated>2022-02-12T14:27:22.680Z</updated>
     
-    <content type="html"><![CDATA[<p>先考虑一个问题：如何用<strong>一条线</strong>把(0,0),(0,1),(1,0),(1,1)这四个点分成两类？</p><p><img src="/note/ai1-3/pic1-3-1.png"></p><p>单纯的改变线肯定是不行的，我们要使点小花招：<strong>改变空间</strong></p><span id="more"></span><p><img src="/note/ai1-3/pic1-3-2.png"></p><blockquote><p><strong>机器学习的序幕已经被拉开</strong></p></blockquote><p>前面所讲过的二元分类器，有一个缺点：它太直了，处理不了数据有交叉的情况。</p><p>直到人们意识到，我们可以弯曲整个坐标系：</p><p>我们加入一层中间层，它的作用就是<strong>改变坐标系</strong></p><p><img src="/note/ai1-3/pic1-3-3.png"></p><p><img src="/note/ai1-3/pic1-3-4.png"></p><p>在这个新结构中，容易发现： <span class="math display">\[Z_1=W_1\timesX_1 +W_2 \times X_2 + b_1\]</span> <span class="math display">\[Z_2=W_3\times X_1 +W_4 \times X_2 +b_2\]</span></p><p>不看阈值b,可以将他写成下列的矩阵形式： <span class="math display">\[\left[ \begin{matrix} W_1&amp;W_2 \\ W_3&amp;W_4\end{matrix} \right ]\left[ \begin{matrix} X_1\\ X_2\end{matrix} \right]=\left[ \begin{matrix} Z_1\\ Z_2\end{matrix} \right ]\]</span> 即<span class="math inline">\(Z=Wx\)</span></p><p>但是，无论我们怎么改变W矩阵，还是无法将这四个点分开，因为它始终属于<strong>线性变换</strong>！</p><p>解决方案很简单：再加一层<strong>非线性变换</strong>！</p><p><img src="/note/ai1-3/pic1-3-5.png"></p><p>隆重介绍：<strong>激活函数(Activation Functions)</strong></p><p>它是以一种特定的规则，让输入数据以一种特定的方式进行输出。比如StepFunction |阶跃函数，在关于鳄鱼和蛇的问题中，输出0或1其实就是阶跃函数运作的结果。</p><p><img src="/note/ai1-3/pic1-3-6.png"></p><p>除此以外，在机器学习中还有三种常见的激活函数：</p><p><strong>逻辑函数：<span class="math inline">\(\sigma(x)=\frac{1}{1+e^{-x}}\)</span></strong></p><p><strong>线性整流函数：<span class="math inline">\(h(x)=\begin{cases}  0&amp;x&lt;0 \\ x &amp; x\geq0\end{cases}\)</span></strong></p><p><strong>双曲正切函数:<span class="math inline">\(tanh(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}\)</span></strong></p><p>让我们回到开始的问题：现在，我们可以再加一层：</p><p><img src="/note/ai1-3/pic1-3-7.png"></p><p>首先我们可以通过线性变换对原来的四个点进行平移：</p><p><img src="/note/ai1-3/pic1-3-8.png"></p><p>再通过阶跃函数，让原本在第三象限的两个点变为(0,0),另外两个变为(0,1)和(1,0)，这样我们就能很自然的将两类点分开。</p><p><img src="/note/ai1-3/pic1-3-9.png"></p><p>由此，我们便搞定了分类异或问题。</p><p>但是如果我们试图在二维平面内分类一个圆环呢？</p><p><img src="/note/ai1-3/pic1-3-10.png"></p><p>这个问题就有点难，但是我们可以试图对问题进行<strong>升维</strong>处理,把二维平面变成三维空间:</p><p><img src="/note/ai1-3/pic1-3-11.png"></p><p>再使用二维平面进行分割，我们就能得到不错的区分度：</p><p><img src="/note/ai1-3/pic1-3-13.png"></p><p>所谓升维，就是将低维的密集数据在高维空间中变得稀疏，从而更好的分开。</p><p>将三维空间的分割面再次投影二维平面，就是一个圆。</p><p><img src="/note/ai1-3/pic1-3-14.png"></p><p>原本扭曲的异或分类还原之后，坐标系会变直，分割线会变弯。但我们都知道，他的本质还是一条直线。</p>]]></content>
+    <content type="html"><![CDATA[<p>先考虑一个问题：如何用<strong>一条线</strong>把(0,0),(0,1),(1,0),(1,1)这四个点分成两类？</p><p><img src="/note/ai1-3/pic1-3-1.png"></p><p>单纯的改变线肯定是不行的，我们要使点小花招：<strong>改变空间</strong></p><span id="more"></span><p><img src="/note/ai1-3/pic1-3-2.png"></p><blockquote><p><strong>机器学习的序幕已经被拉开</strong></p></blockquote><p>前面所讲过的二元分类器，有一个缺点：它太直了，处理不了数据有交叉的情况。</p><p>直到人们意识到，我们可以弯曲整个坐标系：</p><p>我们加入一层中间层，它的作用就是<strong>改变坐标系</strong></p><p><img src="/note/ai1-3/pic1-3-3.png"></p><p><img src="/note/ai1-3/pic1-3-4.png"></p><p>在这个新结构中，容易发现： <span class="math display">\[Z_1=W_1\timesX_1 +W_2 \times X_2 + b_1\]</span> <span class="math display">\[Z_2=W_3\times X_1 +W_4 \times X_2 +b_2\]</span></p><p>不看阈值b,可以将他写成下列的矩阵形式： <span class="math display">\[\left[ \begin{matrix} W_1&amp;W_2 \\ W_3&amp;W_4\end{matrix} \right ]\left[ \begin{matrix} X_1\\ X_2\end{matrix} \right]=\left[ \begin{matrix} Z_1\\ Z_2\end{matrix} \right ]\]</span> 即<span class="math inline">\(Z=Wx\)</span></p><p>但是，无论我们怎么改变W矩阵，还是无法将这四个点分开，因为它始终属于<strong>线性变换</strong>！</p><p>解决方案很简单：再加一层<strong>非线性变换</strong>！</p><p><img src="/note/ai1-3/pic1-3-5.png"></p><p>隆重介绍：<strong>激活函数(Activation Functions)</strong></p><p>它是以一种特定的规则，让输入数据以一种特定的方式进行输出。比如<strong>阶跃函数(stepfunction)</strong>，在关于鳄鱼和蛇的问题中，输出0或1其实就是阶跃函数运作的结果。</p><p><img src="/note/ai1-3/pic1-3-6.png"></p><p>除此以外，在机器学习中还有三种常见的激活函数：</p><p><strong>逻辑函数(sigmoid function)：<span class="math inline">\(\sigma(x)=\frac{1}{1+e^{-x}}\)</span></strong></p><p><strong>线性整流函数(ReLU function)：<span class="math inline">\(h(x)=\begin{cases}  0&amp;x&lt;0 \\ x &amp; x\geq0\end{cases}\)</span></strong></p><p><strong>双曲正切函数(tanh function):<span class="math inline">\(tanh(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}\)</span></strong></p><p>让我们回到开始的问题：现在，我们可以再加一层：</p><p><img src="/note/ai1-3/pic1-3-7.png"></p><p>首先我们可以通过线性变换对原来的四个点进行平移：</p><p><img src="/note/ai1-3/pic1-3-8.png"></p><p>再通过阶跃函数，让原本在第三象限的两个点变为(0,0),另外两个变为(0,1)和(1,0)，这样我们就能很自然的将两类点分开。</p><p><img src="/note/ai1-3/pic1-3-9.png"></p><p>由此，我们便搞定了分类异或问题。</p><p>但是如果我们试图在二维平面内分类一个圆环呢？</p><p><img src="/note/ai1-3/pic1-3-10.png"></p><p>这个问题就有点难，但是我们可以试图对问题进行<strong>升维</strong>处理,把二维平面变成三维空间:</p><p><img src="/note/ai1-3/pic1-3-11.png"></p><p>再使用二维平面进行分割，我们就能得到不错的区分度：</p><p><img src="/note/ai1-3/pic1-3-13.png"></p><p>所谓升维，就是将低维的密集数据在高维空间中变得稀疏，从而更好的分开。</p><p>将三维空间的分割面再次投影二维平面，就是一个圆。</p><p><img src="/note/ai1-3/pic1-3-14.png"></p><p>原本扭曲的异或分类还原之后，坐标系会变直，分割线会变弯。但我们都知道，他的本质还是一条直线。</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;先考虑一个问题：如何用&lt;strong&gt;一条线&lt;/strong&gt;把(0,0),(0,1),(1,0),(1,1)这四个点分成两类？&lt;/p&gt;
