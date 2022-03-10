@@ -1,301 +1,155 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.0.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.jpg">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <meta name="baidu-site-verification" content="rRBeKz6hxcWyFbo8">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"dekrt.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta property="og:type" content="article">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>大学物理实验生存指南 | dekrt's blog</title><meta name="keywords" content="教程 | tutorial"><meta name="author" content="dekrt"><meta name="copyright" content="dekrt"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="隆重介绍：大学物理实验生存指南。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="大学物理实验生存指南">
 <meta property="og:url" content="https://dekrt.cn/tutorial/phy-exp/index.html">
 <meta property="og:site_name" content="dekrt&#39;s blog">
+<meta property="og:description" content="隆重介绍：大学物理实验生存指南。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://dekrt.cn/tutorial/phy-exp/pic-exp-cover.jpg">
-<meta property="og:image" content="https://dekrt.cn/tutorial/phy-exp/pic-exp.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/03/10/bh27sx.jpg">
 <meta property="article:published_time" content="2022-03-07T14:41:39.000Z">
-<meta property="article:modified_time" content="2022-03-08T12:24:28.829Z">
+<meta property="article:modified_time" content="2022-03-10T08:43:24.681Z">
 <meta property="article:author" content="dekrt">
 <meta property="article:tag" content="教程 | tutorial">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://dekrt.cn/tutorial/phy-exp/pic-exp-cover.jpg">
-
-<link rel="canonical" href="https://dekrt.cn/tutorial/phy-exp/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>大学物理实验生存指南 | dekrt's blog</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/03/10/bh27sx.jpg"><link rel="shortcut icon" href="https://cdn.luogu.com.cn/upload/image_hosting/7schyg4e.png"><link rel="canonical" href="https://dekrt.cn/tutorial/phy-exp/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '大学物理实验生存指南',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-10 16:43:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<link rel="alternate" href="/atom.xml" title="dekrt's blog" type="application/atom+xml">
-</head>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">dekrt's blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">菜菜，呜呜</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://dekrt.cn/tutorial/phy-exp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="dekrt">
-      <meta itemprop="description" content="write something casually">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dekrt's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          大学物理实验生存指南
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-07 22:41:39" itemprop="dateCreated datePublished" datetime="2022-03-07T22:41:39+08:00">2022-03-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-08 20:24:28" itemprop="dateModified" datetime="2022-03-08T20:24:28+08:00">2022-03-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tutorial/" itemprop="url" rel="index"><span itemprop="name">tutorial</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
-  
-  <span class="post-meta-item">
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-    <a title="valine" href="/tutorial/phy-exp/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/tutorial/phy-exp/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>212</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <p><img src="/tutorial/phy-exp/pic-exp-cover.jpg"></p>
-<span id="more"></span>
-<h1 id="物理实验数据处理系统">物理实验数据处理系统</h1>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="dekrt's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.luogu.com.cn/upload/image_hosting/7schyg4e.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s1.ax1x.com/2022/03/10/bh27sx.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">dekrt's blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">大学物理实验生存指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-07T14:41:39.000Z" title="发表于 2022-03-07 22:41:39">2022-03-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-10T08:43:24.681Z" title="更新于 2022-03-10 16:43:24">2022-03-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/tutorial/">tutorial</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">187</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="大学物理实验生存指南"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/tutorial/phy-exp/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/tutorial/phy-exp/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="物理实验数据处理系统">物理实验数据处理系统</h1>
 <p>网址：<a target="_blank" rel="noopener" href="http://xzq.hustsvo.com" class="uri">http://xzq.hustsvo.com</a></p>
 <p>顾名思义，可以帮助处理实验数据，甚至还会给出公式，减少计算量。</p>
 <blockquote>
 <p>点击左上角可以切换实验。</p>
 </blockquote>
-<p><img src="/tutorial/phy-exp/pic-exp.png"></p>
+<p><img src="/tutorial/phy-exp/pic-exp.png" width="60%" height="60%"></p>
 <h1 id="现成实验报告">现成实验报告</h1>
 <blockquote>
 <p>点击学院副标题标题即可进入</p>
@@ -332,378 +186,29 @@
 <h4 id="软件学院-2"><a target="_blank" rel="noopener" href="https://blog.csdn.net/lee1hong/article/details/111825347?spm=1001.2014.3001.5501">软件学院</a></h4>
 <h4 id="自动化学院-6"><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU4Mzg0MTMzMA==&amp;mid=100005654&amp;idx=1&amp;sn=0f9142932968c54ec49457fa6f4006b6&amp;scene=19#wechat_redirect">自动化学院</a></h4>
 <h4 id="机械学院-6"><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU4OTYzNzIxMA==&amp;mid=100000067&amp;idx=6&amp;sn=5fd5255e7c8ee1493f221966863f8717&amp;scene=19#wechat_redirect">机械学院</a></h4>
-
-    </div>
-
-    
-    
-    
-
-    
-      <div>
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:18px;">-------------本文结束<i class="fa fa-coffee"></i>感谢您的阅读-------------</div>
-    
-</div>
-      </div>
-    
-        <div class="reward-container">
-  <div>您的支持是我最大的动力!</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    打赏
-  </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
-        <img src="/images/wechatpay.png" alt="dekrt 微信支付">
-        <p>微信支付</p>
-      </div>
-      
-      <div style="display: inline-block;">
-        <img src="/images/alipay.jpg" alt="dekrt 支付宝">
-        <p>支付宝</p>
-      </div>
-
-  </div>
-</div>
-
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>dekrt
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://dekrt.cn/tutorial/phy-exp/" title="大学物理实验生存指南">https://dekrt.cn/tutorial/phy-exp/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-
-      <footer class="post-footer">
-          
-          <div class="post-tags">
-              <a href="/tags/%E6%95%99%E7%A8%8B-tutorial/" rel="tag"><i class="fa fa-tag"></i> 教程 | tutorial</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/note/ai1-6/" rel="prev" title="6 识别语言">
-      <i class="fa fa-chevron-left"></i> 6 识别语言
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">dekrt</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://dekrt.cn/tutorial/phy-exp/">https://dekrt.cn/tutorial/phy-exp/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dekrt.cn" target="_blank">dekrt's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B-tutorial/">教程 | tutorial</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2022/03/10/bh27sx.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/note/ai1-6/"><img class="next-cover" src="https://s1.ax1x.com/2022/03/10/bhcBTg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">6 识别语言</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/tutorial/mooc/" title="慕课 & U校园自动答题脚本使用教程"><img class="cover" src="https://s1.ax1x.com/2022/03/10/bhTWoq.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-26</div><div class="title">慕课 & U校园自动答题脚本使用教程</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.luogu.com.cn/upload/image_hosting/7schyg4e.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">dekrt</div><div class="author-info__description">write something casually</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/dekrt" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:dekrt@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://weibo.com/dekrt" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://twitter.com/dekrt2" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://instagram.com/dekrt" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">菜菜，呜呜，捞捞</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.</span> <span class="toc-text">物理实验数据处理系统</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8E%B0%E6%88%90%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A"><span class="toc-number">2.</span> <span class="toc-text">现成实验报告</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%86%E7%AB%8B%E6%A0%B9%E6%B2%B9%E6%BB%B4"><span class="toc-number">2.1.</span> <span class="toc-text">密立根油滴</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2"><span class="toc-number">2.1.0.1.</span> <span class="toc-text">软件学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2"><span class="toc-number">2.1.0.2.</span> <span class="toc-text">自动化学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%96%E5%AD%A6%E5%AD%A6%E9%99%A2"><span class="toc-number">2.1.0.3.</span> <span class="toc-text">化学学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2"><span class="toc-number">2.1.0.4.</span> <span class="toc-text">机械学院</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%8F%E5%AE%89%E7%89%B9%E6%80%A7"><span class="toc-number">2.2.</span> <span class="toc-text">伏安特性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2-1"><span class="toc-number">2.2.0.1.</span> <span class="toc-text">软件学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-1"><span class="toc-number">2.2.0.2.</span> <span class="toc-text">自动化学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%96%E5%AD%A6%E5%AD%A6%E9%99%A2-1"><span class="toc-number">2.2.0.3.</span> <span class="toc-text">化学学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-1"><span class="toc-number">2.2.0.4.</span> <span class="toc-text">机械学院</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E5%8A%9F%E8%83%BD%E6%91%86"><span class="toc-number">2.3.</span> <span class="toc-text">多功能摆：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-2"><span class="toc-number">2.3.0.1.</span> <span class="toc-text">自动化学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-2"><span class="toc-number">2.3.0.2.</span> <span class="toc-text">机械学院</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E5%85%89%E5%AD%A6"><span class="toc-number">2.4.</span> <span class="toc-text">组合光学</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-3"><span class="toc-number">2.4.0.1.</span> <span class="toc-text">自动化学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-3"><span class="toc-number">2.4.0.2.</span> <span class="toc-text">机械学院</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E9%80%9F%E6%B5%8B%E9%87%8F"><span class="toc-number">2.5.</span> <span class="toc-text">声速测量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-4"><span class="toc-number">2.5.0.1.</span> <span class="toc-text">自动化学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-4"><span class="toc-number">2.5.0.2.</span> <span class="toc-text">机械学院</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9F%B3%E5%8F%89%E6%8C%AF%E5%8A%A8"><span class="toc-number">2.6.</span> <span class="toc-text">音叉振动</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-5"><span class="toc-number">2.6.0.1.</span> <span class="toc-text">自动化学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-5"><span class="toc-number">2.6.0.2.</span> <span class="toc-text">机械学院</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E6%B3%A2%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">2.7.</span> <span class="toc-text">示波器的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2-2"><span class="toc-number">2.7.0.1.</span> <span class="toc-text">软件学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-6"><span class="toc-number">2.7.0.2.</span> <span class="toc-text">自动化学院</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-6"><span class="toc-number">2.7.0.3.</span> <span class="toc-text">机械学院</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/tutorial/phy-exp/" title="大学物理实验生存指南"><img src="https://s1.ax1x.com/2022/03/10/bh27sx.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大学物理实验生存指南"/></a><div class="content"><a class="title" href="/tutorial/phy-exp/" title="大学物理实验生存指南">大学物理实验生存指南</a><time datetime="2022-03-07T14:41:39.000Z" title="发表于 2022-03-07 22:41:39">2022-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/note/ai1-6/" title="6 识别语言"><img src="https://s1.ax1x.com/2022/03/10/bhcBTg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="6 识别语言"/></a><div class="content"><a class="title" href="/note/ai1-6/" title="6 识别语言">6 识别语言</a><time datetime="2022-02-17T09:47:26.000Z" title="发表于 2022-02-17 17:47:26">2022-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/note/ai1-5/" title="5 识别图像"><img src="https://s1.ax1x.com/2022/03/10/bhImpF.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="5 识别图像"/></a><div class="content"><a class="title" href="/note/ai1-5/" title="5 识别图像">5 识别图像</a><time datetime="2022-02-14T06:20:03.000Z" title="发表于 2022-02-14 14:20:03">2022-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/note/ai1-4/" title="4 梯度下降"><img src="https://s1.ax1x.com/2022/03/10/bhIVYT.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="4 梯度下降"/></a><div class="content"><a class="title" href="/note/ai1-4/" title="4 梯度下降">4 梯度下降</a><time datetime="2022-02-11T10:09:45.000Z" title="发表于 2022-02-11 18:09:45">2022-02-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/note/ai1-3/" title="3 加一层"><img src="https://s1.ax1x.com/2022/03/10/bhIkT0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="3 加一层"/></a><div class="content"><a class="title" href="/note/ai1-3/" title="3 加一层">3 加一层</a><time datetime="2022-02-10T14:30:40.000Z" title="发表于 2022-02-10 22:30:40">2022-02-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By dekrt</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '919vOTDx94zr39dk7GN8V5oO-gzGzoHsz',
+      appKey: 'SNQo190ERObk522PearaqLyG',
+      avatar: 'mp',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
   }
-</script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">物理实验数据处理系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%B0%E6%88%90%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A"><span class="nav-number">2.</span> <span class="nav-text">现成实验报告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%86%E7%AB%8B%E6%A0%B9%E6%B2%B9%E6%BB%B4"><span class="nav-number">2.1.</span> <span class="nav-text">密立根油滴</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2"><span class="nav-number">2.1.0.1.</span> <span class="nav-text">软件学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2"><span class="nav-number">2.1.0.2.</span> <span class="nav-text">自动化学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%96%E5%AD%A6%E5%AD%A6%E9%99%A2"><span class="nav-number">2.1.0.3.</span> <span class="nav-text">化学学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2"><span class="nav-number">2.1.0.4.</span> <span class="nav-text">机械学院</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%8F%E5%AE%89%E7%89%B9%E6%80%A7"><span class="nav-number">2.2.</span> <span class="nav-text">伏安特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2-1"><span class="nav-number">2.2.0.1.</span> <span class="nav-text">软件学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-1"><span class="nav-number">2.2.0.2.</span> <span class="nav-text">自动化学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%96%E5%AD%A6%E5%AD%A6%E9%99%A2-1"><span class="nav-number">2.2.0.3.</span> <span class="nav-text">化学学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-1"><span class="nav-number">2.2.0.4.</span> <span class="nav-text">机械学院</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E5%8A%9F%E8%83%BD%E6%91%86"><span class="nav-number">2.3.</span> <span class="nav-text">多功能摆：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-2"><span class="nav-number">2.3.0.1.</span> <span class="nav-text">自动化学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-2"><span class="nav-number">2.3.0.2.</span> <span class="nav-text">机械学院</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E5%85%89%E5%AD%A6"><span class="nav-number">2.4.</span> <span class="nav-text">组合光学</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-3"><span class="nav-number">2.4.0.1.</span> <span class="nav-text">自动化学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-3"><span class="nav-number">2.4.0.2.</span> <span class="nav-text">机械学院</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A3%B0%E9%80%9F%E6%B5%8B%E9%87%8F"><span class="nav-number">2.5.</span> <span class="nav-text">声速测量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-4"><span class="nav-number">2.5.0.1.</span> <span class="nav-text">自动化学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-4"><span class="nav-number">2.5.0.2.</span> <span class="nav-text">机械学院</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9F%B3%E5%8F%89%E6%8C%AF%E5%8A%A8"><span class="nav-number">2.6.</span> <span class="nav-text">音叉振动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-5"><span class="nav-number">2.6.0.1.</span> <span class="nav-text">自动化学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-5"><span class="nav-number">2.6.0.2.</span> <span class="nav-text">机械学院</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E6%B3%A2%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">2.7.</span> <span class="nav-text">示波器的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2-2"><span class="nav-number">2.7.0.1.</span> <span class="nav-text">软件学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2-6"><span class="nav-number">2.7.0.2.</span> <span class="nav-text">自动化学院</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%BA%E6%A2%B0%E5%AD%A6%E9%99%A2-6"><span class="nav-number">2.7.0.3.</span> <span class="nav-text">机械学院</span></a></li></ol></li></ol></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="dekrt"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">dekrt</p>
-  <div class="site-description" itemprop="description">write something casually</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">15</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/dekrt" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dekrt" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:dekrt@qq.com" title="E-Mail → mailto:dekrt@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://weibo.com/dekrt" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;dekrt" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://www.zhihu.com/people/dekrt" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;dekrt" rel="noopener" target="_blank"><i class="fab fa-gratipay fa-fw"></i>知乎</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/dekrt2" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;dekrt2" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://instagram.com/dekrt" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;dekrt" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
-      </span>
-  </div>
-
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://dekrt.cn/" title="https:&#x2F;&#x2F;dekrt.cn">dekrt's blog</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://azxzone.cn/" title="https:&#x2F;&#x2F;azxzone.cn" rel="noopener" target="_blank">azxzone</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">dekrt</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-      <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">130k</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:58</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-  
-</br>
-
-  <div class="powered-by">
-    <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-      本站访客数:<span id="busuanzi_value_site_uv"></span>
-  </span>
-
-  <div class="powered-by">
-    <i class="fa fa-eye"></i><span id="busuanzi_container_site_uv">
-      本站访问次数:<span id="busuanzi_value_site_pv"></span>
-  </span>
-
-</div>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : true,
-      notify     : true,
-      appId      : '919vOTDx94zr39dk7GN8V5oO-gzGzoHsz',
-      appKey     : 'SNQo190ERObk522PearaqLyG',
-      placeholder: "随便说点什么吧！",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : false,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : true,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
-
-</body>
-</html>
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

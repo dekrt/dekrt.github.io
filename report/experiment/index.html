@@ -1,361 +1,150 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.0.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.jpg">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <meta name="baidu-site-verification" content="rRBeKz6hxcWyFbo8">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"dekrt.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="本文全部公式采用mathjax渲染，观感极佳">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>C语言实验报告 | dekrt's blog</title><meta name="keywords" content="答案 | answer,报告 | report"><meta name="author" content="dekrt"><meta name="copyright" content="dekrt"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="软件学院C语言程序设计实验报告">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言实验报告">
 <meta property="og:url" content="https://dekrt.cn/report/experiment/index.html">
 <meta property="og:site_name" content="dekrt&#39;s blog">
-<meta property="og:description" content="本文全部公式采用mathjax渲染，观感极佳">
+<meta property="og:description" content="软件学院C语言程序设计实验报告">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/cover.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/b518c95736d79144b989857de34e3b34.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/ef9c5024ad712e67ce818b3d51da8eea.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/b2ee8895bfa7cc5a69d305917fab9259.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/da8d1dc42b60e7d3d5ecf3d11bb96b2c.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/b83107be4ee83c6b67fd7b22c0921add.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/cbba3e4e160058c8a88ef1d093448d63.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/646ca82f3ac4a6658975c19b53521d2d.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/071602f03a3be38276fedbf375c5572b.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/53448e04fe0994a734867f67db70ca1f.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/e46b36c0edc652549a61690ef7acc01d.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/27914d08b976624b20469d9c4d112f2a.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/73d00cab4295af040c319e9cf18492a0.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/4acec651c10dbf16d2384b543fda0249.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/4e292dc75c70a3c5db0f341a67294535.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/55168a116fe08966b11d72bdd8f09d1b.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/af43b74e952211c92f290859aca95293.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/7f186b9c7ab30ec91daac73311ed3be6.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/8345e59c7df5e4e7ae3420be39d9a318.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/3a69453178f86a5cfb310089b1fa1a10.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/31df2a4ebc550e29f0a8e38f6726606e.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/89b618ce77b70cfc7a08d43c1a15bc93.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/32c6934e0faa3c258e21f2d684e2cb37.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/04713efeb62ef61a1c47b155881be96d.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/5c4fc448ded41b991503c08c57b657f1.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/261dc275382320ee2566c9b5fc8fb2a7.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/a6d0e365fa95995f1193ee01b650146a.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/e2d0793dd50f58f6ac396874a0699d1d.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/d649e9df5e226b9769af2999639cbdd5.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/0d100976a62d3d09d6dbc25fee7634b7.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/e2d56e18ae2574340a3e6934d608a4fa.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/702a8ec0cdcfd88dc89a2946cbdd9a26.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/cdde5a83828c0e1022b7d8872d3f435f.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/32604dbb54835fc12314ca37e0e1701c.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/bb661f78190a39e2843052d350189f7d.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/0807a5d4a3939fe76a2ad8455ab4a4cd.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/036bef4c566af4e0c3b3156b6647075a.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/503af37a1c7c63b6b4c28fc1c2fdc772.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/7d0210b6c066fa0408f28b0ea4cdcceb.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/52de107fb13bcca726fa507c50672c12.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/7d0210b6c066fa0408f28b0ea4cdcceb.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/b180a4ebd84b7f433832ab199b1fa09a.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/f2dc5ca1f4185cbbc09c834ad3f2bf70.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/124d718fecb8b47c59cb1064a608ea63.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/aea7efc81adbc9d6bdc954225bfde329.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/8d4284bb43019c24466744bb4c462f9b.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/54f42550a635245e5769693d5a0ce336.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/54f42550a635245e5769693d5a0ce336.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/34e67db19363fc751ec55f8da9bb2fdf.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/34e67db19363fc751ec55f8da9bb2fdf.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/0c68b97a23ca1f852f2268968acb972e.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/2b5a5fc1b1a19421c03513ca4d4a9631.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/68d62f40a04ea20847c455fedec76867.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/d2eeef1b20f5aa09af709838bb26633b.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/ff82d4baa9d6ba6f34040c59ec340d45.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/c2744de136b914f686d45625bcf02d3c.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/6d98d6532cae04ed574d5ed52504e312.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/cf4d61d44f6a7f2a19be6243cc197fbd.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/0293868b335a2da604a85d9379e4eb83.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/275b21504aad549e8107b1eec9113eb2.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/539724e878c99b6d9f8e3563909aa27b.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/64eaaafbb113557fc1c158e6cde943d9.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/ea9171f1ffc35f43c0bfaf697afe55a1.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/f63ad2fbfad7568221777c75b8c3328b.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/a3468e32561e8af57b78c6cac657cbdb.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/cb53d1670ccc416d1927af62055c60c4.png">
-<meta property="og:image" content="https://dekrt.cn/report/experiment/9bac5c465f36a334af7c31703876767d.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/03/10/bhIu6J.png">
 <meta property="article:published_time" content="2022-01-20T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-22T06:41:39.979Z">
+<meta property="article:modified_time" content="2022-03-10T08:30:11.572Z">
 <meta property="article:author" content="dekrt">
 <meta property="article:tag" content="答案 | answer">
 <meta property="article:tag" content="报告 | report">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://dekrt.cn/report/experiment/cover.png">
-
-<link rel="canonical" href="https://dekrt.cn/report/experiment/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>C语言实验报告 | dekrt's blog</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/03/10/bhIu6J.png"><link rel="shortcut icon" href="https://cdn.luogu.com.cn/upload/image_hosting/7schyg4e.png"><link rel="canonical" href="https://dekrt.cn/report/experiment/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'C语言实验报告',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-10 16:30:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<link rel="alternate" href="/atom.xml" title="dekrt's blog" type="application/atom+xml">
-</head>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">dekrt's blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">菜菜，呜呜</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://dekrt.cn/report/experiment/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="dekrt">
-      <meta itemprop="description" content="write something casually">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dekrt's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          C语言实验报告
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-01-21 00:00:00" itemprop="dateCreated datePublished" datetime="2022-01-21T00:00:00+08:00">2022-01-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-01-22 14:41:39" itemprop="dateModified" datetime="2022-01-22T14:41:39+08:00">2022-01-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/report/" itemprop="url" rel="index"><span itemprop="name">report</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
-  
-  <span class="post-meta-item">
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-    <a title="valine" href="/report/experiment/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/report/experiment/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>57k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>52 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <p><img src="/report/experiment/cover.png"></p>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="dekrt's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.luogu.com.cn/upload/image_hosting/7schyg4e.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s1.ax1x.com/2022/03/10/bhIu6J.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">dekrt's blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C语言实验报告</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-20T16:00:00.000Z" title="发表于 2022-01-21 00:00:00">2022-01-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-10T08:30:11.572Z" title="更新于 2022-03-10 16:30:11">2022-03-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/report/">report</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">20.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>87分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="C语言实验报告"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/report/experiment/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/report/experiment/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="/report/experiment/cover.png"></p>
 <blockquote>
 <p>本文全部公式采用mathjax渲染，观感极佳</p>
 </blockquote>
@@ -1420,436 +1209,75 @@ task0，然后以函数指针数组和任务个数为参数将调度选择结果
 <h2 id="实验小结-7">8.3 实验小结</h2>
 <p>（1）通过这次实验，我熟悉了文本文件和二进制文件在磁盘中的存储方式；</p>
 <p>（2）通过这次实验，我熟练掌握了流式文件的读写方法。</p>
-
-    </div>
-
-    
-    
-    
-
-    
-      <div>
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:18px;">-------------本文结束<i class="fa fa-coffee"></i>感谢您的阅读-------------</div>
-    
-</div>
-      </div>
-    
-        <div class="reward-container">
-  <div>您的支持是我最大的动力!</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    打赏
-  </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
-        <img src="/images/wechatpay.png" alt="dekrt 微信支付">
-        <p>微信支付</p>
-      </div>
-      
-      <div style="display: inline-block;">
-        <img src="/images/alipay.jpg" alt="dekrt 支付宝">
-        <p>支付宝</p>
-      </div>
-
-  </div>
-</div>
-
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>dekrt
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://dekrt.cn/report/experiment/" title="C语言实验报告">https://dekrt.cn/report/experiment/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-
-      <footer class="post-footer">
-          
-          <div class="post-tags">
-              <a href="/tags/%E7%AD%94%E6%A1%88-answer/" rel="tag"><i class="fa fa-tag"></i> 答案 | answer</a>
-              <a href="/tags/%E6%8A%A5%E5%91%8A-report/" rel="tag"><i class="fa fa-tag"></i> 报告 | report</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/answer/problems/" rel="prev" title="C语言课后习题&头歌答案">
-      <i class="fa fa-chevron-left"></i> C语言课后习题&头歌答案
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/answer/military/" rel="next" title="华科军事理论线上作业答案">
-      华科军事理论线上作业答案 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">dekrt</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://dekrt.cn/report/experiment/">https://dekrt.cn/report/experiment/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dekrt.cn" target="_blank">dekrt's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AD%94%E6%A1%88-answer/">答案 | answer</a><a class="post-meta__tags" href="/tags/%E6%8A%A5%E5%91%8A-report/">报告 | report</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2022/03/10/bhIu6J.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/answer/military/"><img class="prev-cover" src="https://s1.ax1x.com/2022/03/10/bhLM80.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">华科军事理论线上作业答案</div></div></a></div><div class="next-post pull-right"><a href="/answer/problems/"><img class="next-cover" src="https://cdn.luogu.com.cn/upload/image_hosting/9v7j75wu.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">C语言课后习题&amp;头歌答案</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/answer/military/" title="华科军事理论线上作业答案"><img class="cover" src="https://s1.ax1x.com/2022/03/10/bhLM80.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-22</div><div class="title">华科军事理论线上作业答案</div></div></a></div><div><a href="/answer/problems/" title="C语言课后习题&头歌答案"><img class="cover" src="https://cdn.luogu.com.cn/upload/image_hosting/9v7j75wu.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-14</div><div class="title">C语言课后习题&头歌答案</div></div></a></div><div><a href="/answer/homework/" title="C语言程序设计作业"><img class="cover" src="https://s1.ax1x.com/2022/03/10/bhbWTA.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-14</div><div class="title">C语言程序设计作业</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.luogu.com.cn/upload/image_hosting/7schyg4e.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">dekrt</div><div class="author-info__description">write something casually</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/dekrt" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:dekrt@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://weibo.com/dekrt" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://twitter.com/dekrt2" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://instagram.com/dekrt" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">菜菜，呜呜，捞捞</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C1-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA%E5%AE%9E%E9%AA%8C"><span class="toc-number">1.</span> <span class="toc-text">实验1
+表达式和标准输入与输出实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 实验内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99"><span class="toc-number">1.2.1.</span> <span class="toc-text">1 源程序改错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.2.2.</span> <span class="toc-text">2 程序设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 实验小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C2-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%AE%9E%E9%AA%8C"><span class="toc-number">2.</span> <span class="toc-text">实验2 流程控制实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-1"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9%E5%8F%8A%E8%A6%81%E6%B1%82"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 实验内容及要求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1程序改错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2程序修改替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-1"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3程序设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-1"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 实验小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C3-%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C"><span class="toc-number">3.</span> <span class="toc-text">实验3 函数与程序结构实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-2"><span class="toc-number">3.1.</span> <span class="toc-text">3.1实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9-1"><span class="toc-number">3.2.</span> <span class="toc-text">3.2实验内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99%E9%A2%98"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1.程序改错题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2%E9%A2%98"><span class="toc-number">3.2.2.</span> <span class="toc-text">3.3.2．程序修改替换题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%9F%E8%B8%AA%E8%B0%83%E8%AF%95%E9%A2%98"><span class="toc-number">3.2.3.</span> <span class="toc-text">3.3.3．跟踪调试题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-2"><span class="toc-number">3.2.4.</span> <span class="toc-text">3.3.4．程序设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-2"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 实验小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C4-%E7%BC%96%E8%AF%91%E9%A2%84%E5%A4%84%E7%90%86%E5%AE%9E%E9%AA%8C"><span class="toc-number">4.</span> <span class="toc-text">实验4 编译预处理实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-3"><span class="toc-number">4.1.</span> <span class="toc-text">4.1实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9-2"><span class="toc-number">4.2.</span> <span class="toc-text">4.2实验内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99-1"><span class="toc-number">4.2.1.</span> <span class="toc-text">4.2.1．程序改错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2-1"><span class="toc-number">4.2.2.</span> <span class="toc-text">4.2.2．程序修改替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-3"><span class="toc-number">4.2.3.</span> <span class="toc-text">4.2.4．程序设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-3"><span class="toc-number">4.3.</span> <span class="toc-text">4.3实验小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C5-%E6%95%B0%E7%BB%84%E5%AE%9E%E9%AA%8C"><span class="toc-number">5.</span> <span class="toc-text">实验5 数组实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-4"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9%E5%8F%8A%E8%A6%81%E6%B1%82-1"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 实验内容及要求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99%E4%B8%8E%E8%B7%9F%E8%B8%AA%E8%B0%83%E8%AF%95"><span class="toc-number">5.2.1.</span> <span class="toc-text">5.2.1 源程序改错与跟踪调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-4"><span class="toc-number">5.2.2.</span> <span class="toc-text">5.3 实验小结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C6-%E6%8C%87%E9%92%88%E5%AE%9E%E9%AA%8C"><span class="toc-number">6.</span> <span class="toc-text">实验6 指针实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-5"><span class="toc-number">6.1.</span> <span class="toc-text">6.1、实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E9%A2%98%E7%9B%AE%E5%8F%8A%E8%A6%81%E6%B1%82"><span class="toc-number">6.2.</span> <span class="toc-text">6.2、实验题目及要求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99%E9%A2%98"><span class="toc-number">6.2.1.</span> <span class="toc-text">6.2.1 源程序改错题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E5%AE%8C%E5%96%84%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2%E9%A2%98"><span class="toc-number">6.2.2.</span> <span class="toc-text">6.2.2源程序完善、修改替换题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-5"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 实验小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C7-%E7%BB%93%E6%9E%84%E4%B8%8E%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C"><span class="toc-number">7.</span> <span class="toc-text">实验7 结构与联合实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-6"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E9%A2%98%E7%9B%AE%E5%8F%8A%E8%A6%81%E6%B1%82-1"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 实验题目及要求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E7%9A%84%E7%A8%8B%E5%BA%8F%E9%AA%8C%E8%AF%81%E9%A2%98"><span class="toc-number">7.2.1.</span> <span class="toc-text">7.2.1．表达式求值的程序验证题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2%E9%A2%98"><span class="toc-number">7.2.2.</span> <span class="toc-text">7.2.2．源程序修改替换题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-4"><span class="toc-number">7.2.3.</span> <span class="toc-text">7.2.3 程序设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-6"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 实验小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C8-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C"><span class="toc-number">8.</span> <span class="toc-text">实验8 文件操作实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-7"><span class="toc-number">8.1.</span> <span class="toc-text">8.1实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E9%A2%98%E7%9B%AE%E5%8F%8A%E8%A6%81%E6%B1%82-2"><span class="toc-number">8.2.</span> <span class="toc-text">8.2实验题目及要求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%A8%8B%E5%BA%8F%E9%AA%8C%E8%AF%81%E9%A2%98"><span class="toc-number">8.2.1.</span> <span class="toc-text">文件类型的程序验证题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2%E9%A2%98-1"><span class="toc-number">8.2.2.</span> <span class="toc-text">源程序修改替换题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-5"><span class="toc-number">8.2.3.</span> <span class="toc-text">程序设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-7"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 实验小结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/tutorial/phy-exp/" title="大学物理实验生存指南"><img src="https://s1.ax1x.com/2022/03/10/bh27sx.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大学物理实验生存指南"/></a><div class="content"><a class="title" href="/tutorial/phy-exp/" title="大学物理实验生存指南">大学物理实验生存指南</a><time datetime="2022-03-07T14:41:39.000Z" title="发表于 2022-03-07 22:41:39">2022-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/note/ai1-6/" title="6 识别语言"><img src="https://s1.ax1x.com/2022/03/10/bhcBTg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="6 识别语言"/></a><div class="content"><a class="title" href="/note/ai1-6/" title="6 识别语言">6 识别语言</a><time datetime="2022-02-17T09:47:26.000Z" title="发表于 2022-02-17 17:47:26">2022-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/note/ai1-5/" title="5 识别图像"><img src="https://s1.ax1x.com/2022/03/10/bhImpF.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="5 识别图像"/></a><div class="content"><a class="title" href="/note/ai1-5/" title="5 识别图像">5 识别图像</a><time datetime="2022-02-14T06:20:03.000Z" title="发表于 2022-02-14 14:20:03">2022-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/note/ai1-4/" title="4 梯度下降"><img src="https://s1.ax1x.com/2022/03/10/bhIVYT.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="4 梯度下降"/></a><div class="content"><a class="title" href="/note/ai1-4/" title="4 梯度下降">4 梯度下降</a><time datetime="2022-02-11T10:09:45.000Z" title="发表于 2022-02-11 18:09:45">2022-02-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/note/ai1-3/" title="3 加一层"><img src="https://s1.ax1x.com/2022/03/10/bhIkT0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="3 加一层"/></a><div class="content"><a class="title" href="/note/ai1-3/" title="3 加一层">3 加一层</a><time datetime="2022-02-10T14:30:40.000Z" title="发表于 2022-02-10 22:30:40">2022-02-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By dekrt</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
   }
-</script>
-
-        </div>
-          
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C1-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA%E5%AE%9E%E9%AA%8C"><span class="nav-number">1.</span> <span class="nav-text">实验1
-表达式和标准输入与输出实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 实验内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99"><span class="nav-number">1.2.1.</span> <span class="nav-text">1 源程序改错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.2.</span> <span class="nav-text">2 程序设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 实验小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C2-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%AE%9E%E9%AA%8C"><span class="nav-number">2.</span> <span class="nav-text">实验2 流程控制实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-1"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9%E5%8F%8A%E8%A6%81%E6%B1%82"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 实验内容及要求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1程序改错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2程序修改替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.2.3程序设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-1"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 实验小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C3-%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C"><span class="nav-number">3.</span> <span class="nav-text">实验3 函数与程序结构实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-2"><span class="nav-number">3.1.</span> <span class="nav-text">3.1实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9-1"><span class="nav-number">3.2.</span> <span class="nav-text">3.2实验内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99%E9%A2%98"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.2.1.程序改错题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2%E9%A2%98"><span class="nav-number">3.2.2.</span> <span class="nav-text">3.3.2．程序修改替换题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%9F%E8%B8%AA%E8%B0%83%E8%AF%95%E9%A2%98"><span class="nav-number">3.2.3.</span> <span class="nav-text">3.3.3．跟踪调试题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-2"><span class="nav-number">3.2.4.</span> <span class="nav-text">3.3.4．程序设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-2"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 实验小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C4-%E7%BC%96%E8%AF%91%E9%A2%84%E5%A4%84%E7%90%86%E5%AE%9E%E9%AA%8C"><span class="nav-number">4.</span> <span class="nav-text">实验4 编译预处理实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-3"><span class="nav-number">4.1.</span> <span class="nav-text">4.1实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9-2"><span class="nav-number">4.2.</span> <span class="nav-text">4.2实验内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">4.2.1．程序改错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">4.2.2．程序修改替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-3"><span class="nav-number">4.2.3.</span> <span class="nav-text">4.2.4．程序设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-3"><span class="nav-number">4.3.</span> <span class="nav-text">4.3实验小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C5-%E6%95%B0%E7%BB%84%E5%AE%9E%E9%AA%8C"><span class="nav-number">5.</span> <span class="nav-text">实验5 数组实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-4"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9%E5%8F%8A%E8%A6%81%E6%B1%82-1"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 实验内容及要求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99%E4%B8%8E%E8%B7%9F%E8%B8%AA%E8%B0%83%E8%AF%95"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1 源程序改错与跟踪调试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-4"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.3 实验小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C6-%E6%8C%87%E9%92%88%E5%AE%9E%E9%AA%8C"><span class="nav-number">6.</span> <span class="nav-text">实验6 指针实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-5"><span class="nav-number">6.1.</span> <span class="nav-text">6.1、实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E9%A2%98%E7%9B%AE%E5%8F%8A%E8%A6%81%E6%B1%82"><span class="nav-number">6.2.</span> <span class="nav-text">6.2、实验题目及要求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%94%B9%E9%94%99%E9%A2%98"><span class="nav-number">6.2.1.</span> <span class="nav-text">6.2.1 源程序改错题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E5%AE%8C%E5%96%84%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2%E9%A2%98"><span class="nav-number">6.2.2.</span> <span class="nav-text">6.2.2源程序完善、修改替换题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-5"><span class="nav-number">6.3.</span> <span class="nav-text">6.3 实验小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C7-%E7%BB%93%E6%9E%84%E4%B8%8E%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C"><span class="nav-number">7.</span> <span class="nav-text">实验7 结构与联合实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-6"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E9%A2%98%E7%9B%AE%E5%8F%8A%E8%A6%81%E6%B1%82-1"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 实验题目及要求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E7%9A%84%E7%A8%8B%E5%BA%8F%E9%AA%8C%E8%AF%81%E9%A2%98"><span class="nav-number">7.2.1.</span> <span class="nav-text">7.2.1．表达式求值的程序验证题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2%E9%A2%98"><span class="nav-number">7.2.2.</span> <span class="nav-text">7.2.2．源程序修改替换题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-4"><span class="nav-number">7.2.3.</span> <span class="nav-text">7.2.3 程序设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-6"><span class="nav-number">7.3.</span> <span class="nav-text">7.3 实验小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C8-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C"><span class="nav-number">8.</span> <span class="nav-text">实验8 文件操作实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84-7"><span class="nav-number">8.1.</span> <span class="nav-text">8.1实验目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E9%A2%98%E7%9B%AE%E5%8F%8A%E8%A6%81%E6%B1%82-2"><span class="nav-number">8.2.</span> <span class="nav-text">8.2实验题目及要求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%A8%8B%E5%BA%8F%E9%AA%8C%E8%AF%81%E9%A2%98"><span class="nav-number">8.2.1.</span> <span class="nav-text">文件类型的程序验证题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BA%90%E7%A8%8B%E5%BA%8F%E4%BF%AE%E6%94%B9%E6%9B%BF%E6%8D%A2%E9%A2%98-1"><span class="nav-number">8.2.2.</span> <span class="nav-text">源程序修改替换题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-5"><span class="nav-number">8.2.3.</span> <span class="nav-text">程序设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%B0%8F%E7%BB%93-7"><span class="nav-number">8.3.</span> <span class="nav-text">8.3 实验小结</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="dekrt"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">dekrt</p>
-  <div class="site-description" itemprop="description">write something casually</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">15</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/dekrt" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dekrt" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:dekrt@qq.com" title="E-Mail → mailto:dekrt@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://weibo.com/dekrt" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;dekrt" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://www.zhihu.com/people/dekrt" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;dekrt" rel="noopener" target="_blank"><i class="fab fa-gratipay fa-fw"></i>知乎</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/dekrt2" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;dekrt2" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://instagram.com/dekrt" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;dekrt" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
-      </span>
-  </div>
-
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://dekrt.cn/" title="https:&#x2F;&#x2F;dekrt.cn">dekrt's blog</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://azxzone.cn/" title="https:&#x2F;&#x2F;azxzone.cn" rel="noopener" target="_blank">azxzone</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">dekrt</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-      <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">130k</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:58</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-  
-</br>
-
-  <div class="powered-by">
-    <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-      本站访客数:<span id="busuanzi_value_site_uv"></span>
-  </span>
-
-  <div class="powered-by">
-    <i class="fa fa-eye"></i><span id="busuanzi_container_site_uv">
-      本站访问次数:<span id="busuanzi_value_site_pv"></span>
-  </span>
-
-</div>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '919vOTDx94zr39dk7GN8V5oO-gzGzoHsz',
+      appKey: 'SNQo190ERObk522PearaqLyG',
+      avatar: 'mp',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
   }
-</script>
 
-    
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
 
-  
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : true,
-      notify     : true,
-      appId      : '919vOTDx94zr39dk7GN8V5oO-gzGzoHsz',
-      appKey     : 'SNQo190ERObk522PearaqLyG',
-      placeholder: "随便说点什么吧！",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : false,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : true,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
-
-</body>
-</html>
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
