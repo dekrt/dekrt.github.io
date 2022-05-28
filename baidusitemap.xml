@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://dekrt.cn/note/ai1-5/</loc>
+    <lastmod>2022-05-28</lastmod>
+  </url>
+  <url>
     <loc>https://dekrt.cn/tutorial/phy-exp/</loc>
     <lastmod>2022-04-13</lastmod>
   </url>
@@ -18,10 +22,6 @@
   </url>
   <url>
     <loc>https://dekrt.cn/note/ai1-4/</loc>
-    <lastmod>2022-03-10</lastmod>
-  </url>
-  <url>
-    <loc>https://dekrt.cn/note/ai1-5/</loc>
     <lastmod>2022-03-10</lastmod>
   </url>
   <url>
