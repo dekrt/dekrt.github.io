@@ -12,7 +12,7 @@
 <meta property="article:tag" content="人工智能 | ai">
 <meta property="article:tag" content="笔记 | note">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2022/03/10/bhInl4.png"><link rel="shortcut icon" href="https://cdn.luogu.com.cn/upload/image_hosting/7schyg4e.png"><link rel="canonical" href="https://dekrt.cn/note/ai1-2.5/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.1/css/all.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://blogapi.chrelyonly.cn/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/03/10/bhInl4.png"><link rel="shortcut icon" href="https://cdn.luogu.com.cn/upload/image_hosting/7schyg4e.png"><link rel="canonical" href="https://dekrt.cn/note/ai1-2.5/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://blogapi.chrelyonly.cn/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -244,52 +244,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/j
 
   }
 }
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (!window.MathJax) {
-  window.MathJax = {
-    tex: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"]],
-      tags: 'ams'
-    },
-    chtml: {
-      scale: 1.2
-    },
-    options: {
-      renderActions: {
-        findScript: [10, doc => {
-          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-            const display = !!node.type.match(/; *mode=display/)
-            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
-            const text = document.createTextNode('')
-            node.parentNode.replaceChild(text, node)
-            math.start = {node: text, delim: '', n: 0}
-            math.end = {node: text, delim: '', n: 0}
-            doc.math.push(math)
-          }
-        }, ''],
-        insertScript: [200, () => {
-          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
-            const target = node.parentNode
-            if (target.nodeName.toLowerCase() === 'li') {
-              target.parentNode.classList.add('has-jax')
-            } else {
-              target.classList.add('has-jax')
-            }
-          });
-        }, '', false]
-      }
-    }
-  }
-  
-  const script = document.createElement('script')
-  script.src = 'https://blogapi.chrelyonly.cn/tex-mml-chtml.js'
-  script.id = 'MathJax-script'
-  script.async = true
-  document.head.appendChild(script)
-} else {
-  MathJax.startup.document.state(0)
-  MathJax.texReset()
-  MathJax.typeset()
-}</script><link rel="stylesheet" type="text/css" href="https://blogapi.chrelyonly.cn/katex.min.css"><script src="https://blogapi.chrelyonly.cn/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://blogapi.chrelyonly.cn/copy-tex.css"><script>(() => {
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://blogapi.chrelyonly.cn/katex.min.css"><script src="https://blogapi.chrelyonly.cn/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://blogapi.chrelyonly.cn/copy-tex.css"><script>(() => {
   document.querySelectorAll('#article-container span.katex-display').forEach(item => {
     btf.wrap(item, 'div', { class: 'katex-wrap'})
   })
