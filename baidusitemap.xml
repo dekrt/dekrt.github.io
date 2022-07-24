@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dekrt.cn/note/discrete-math/</loc>
+    <loc>https://dekrt.cn/tutorial/phy-exp/</loc>
     <lastmod>2022-07-24</lastmod>
   </url>
   <url>
-    <loc>https://dekrt.cn/tutorial/phy-exp/</loc>
-    <lastmod>2022-07-23</lastmod>
+    <loc>https://dekrt.cn/introduction/Introduction/</loc>
+    <lastmod>2022-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://dekrt.cn/note/discrete-math/</loc>
+    <lastmod>2022-07-24</lastmod>
   </url>
   <url>
     <loc>https://dekrt.cn/tutorial/mooc/</loc>
@@ -38,10 +42,6 @@
   </url>
   <url>
     <loc>https://dekrt.cn/report/experiment/</loc>
-    <lastmod>2022-03-10</lastmod>
-  </url>
-  <url>
-    <loc>https://dekrt.cn/introduction/Introduction/</loc>
     <lastmod>2022-03-10</lastmod>
   </url>
   <url>
