@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dekrt.cn/note/discrete-math/</loc>
+    <loc>https://dekrt.cn/tutorial/book/</loc>
     
     <lastmod>2023-03-27</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://dekrt.cn/tutorial/book/</loc>
+    <loc>https://dekrt.cn/note/discrete-math/</loc>
     
     <lastmod>2023-03-27</lastmod>
     
@@ -227,6 +227,13 @@
 
   
   <url>
+    <loc>https://dekrt.cn/tags/%E4%BB%8B%E7%BB%8D-introduction/</loc>
+    <lastmod>2023-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://dekrt.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-ai/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -241,28 +248,7 @@
   </url>
   
   <url>
-    <loc>https://dekrt.cn/tags/%E4%BB%8B%E7%BB%8D-introduction/</loc>
-    <lastmod>2023-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dekrt.cn/tags/%E6%95%99%E7%A8%8B-tutorial/</loc>
-    <lastmod>2023-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://dekrt.cn/tags/%E7%AD%94%E6%A1%88-answer/</loc>
-    <lastmod>2023-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://dekrt.cn/tags/%E4%BD%9C%E4%B8%9A-assignment/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -283,6 +269,20 @@
   </url>
   
   <url>
+    <loc>https://dekrt.cn/tags/%E7%AD%94%E6%A1%88-answer/</loc>
+    <lastmod>2023-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dekrt.cn/tags/%E4%BD%9C%E4%B8%9A-assignment/</loc>
+    <lastmod>2023-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://dekrt.cn/tags/%E8%84%9A%E6%9C%AC-script/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -292,14 +292,14 @@
 
   
   <url>
-    <loc>https://dekrt.cn/categories/note/</loc>
+    <loc>https://dekrt.cn/categories/introduction/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://dekrt.cn/categories/introduction/</loc>
+    <loc>https://dekrt.cn/categories/note/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -313,14 +313,14 @@
   </url>
   
   <url>
-    <loc>https://dekrt.cn/categories/answer/</loc>
+    <loc>https://dekrt.cn/categories/report/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://dekrt.cn/categories/report/</loc>
+    <loc>https://dekrt.cn/categories/answer/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
