@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>课本pdf互助站</title>
+      <link href="/tutorial/book/"/>
+      <url>/tutorial/book/</url>
+      
+        <content type="html"><![CDATA[<p>课本pdf互助站</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tutorial </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 | tutorial </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>软件设计综合实践实验报告</title>
       <link href="/report/cpsd/"/>
       <url>/report/cpsd/</url>
