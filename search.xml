@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>安全教育刷课教程</title>
+      <link href="/tutorial/maike/"/>
+      <url>/tutorial/maike/</url>
+      
+        <content type="html"><![CDATA[<h1 align="center">安全教育刷课教程</h1><blockquote><p>这个安全教育每次要点老半天了。。这里用Chrome浏览器演示一下快速刷课，Edge浏览器同理</p></blockquote><p>用<strong>电脑浏览器</strong>打开https://weiban.mycourse.cn/#/login，并登录</p><p><img src="/tutorial/maike/pic1.png"></p><p>进入安全教育学习</p><p><img src="/tutorial/maike/pic2.png"></p><p>点击一个没有学习的，进入学习</p><p><img src="/tutorial/maike/pic3.png"></p><p>进入学习界面后，按F12打开控制台，选择console</p><p><img src="/tutorial/maike/pic4.png"></p><p>在<code>top</code>那栏选择<code>mcwk.mycours.cn</code>，然后在下方控制台输入<code>finishWxCourse();</code>，按回车</p><p><img src="/tutorial/maike/pic5.png"></p><p><strong>恭喜你完成了本微课的学习！</strong></p><p><img src="/tutorial/maike/pic6.png"></p><p><img src="/tutorial/maike/pic7.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tutorial </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 | tutorial </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>课本pdf互助站</title>
       <link href="/tutorial/book/"/>
       <url>/tutorial/book/</url>

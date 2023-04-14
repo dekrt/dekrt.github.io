@@ -6,7 +6,7 @@
   <link href="https://dekrt.cn/atom.xml" rel="self"/>
   
   <link href="https://dekrt.cn/"/>
-  <updated>2023-03-27T14:08:41.992Z</updated>
+  <updated>2023-04-14T08:22:30.415Z</updated>
   <id>https://dekrt.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安全教育刷课教程</title>
+    <link href="https://dekrt.cn/tutorial/maike/"/>
+    <id>https://dekrt.cn/tutorial/maike/</id>
+    <published>2023-04-14T08:04:24.000Z</published>
+    <updated>2023-04-14T08:22:30.415Z</updated>
+    
+    <content type="html"><![CDATA[<h1 align="center">安全教育刷课教程</h1><blockquote><p>这个安全教育每次要点老半天了。。这里用Chrome浏览器演示一下快速刷课，Edge浏览器同理</p></blockquote><p>用<strong>电脑浏览器</strong>打开https://weiban.mycourse.cn/#/login，并登录</p><p><img src="/tutorial/maike/pic1.png"></p><p>进入安全教育学习</p><p><img src="/tutorial/maike/pic2.png"></p><p>点击一个没有学习的，进入学习</p><p><img src="/tutorial/maike/pic3.png"></p><p>进入学习界面后，按F12打开控制台，选择console</p><p><img src="/tutorial/maike/pic4.png"></p><p>在<code>top</code>那栏选择<code>mcwk.mycours.cn</code>，然后在下方控制台输入<code>finishWxCourse();</code>，按回车</p><p><img src="/tutorial/maike/pic5.png"></p><p><strong>恭喜你完成了本微课的学习！</strong></p><p><img src="/tutorial/maike/pic6.png"></p><p><img src="/tutorial/maike/pic7.png"></p>]]></content>
+    
+    
+    <summary type="html">这个安全教育每次要点老半天了。。这里用Chrome浏览器演示一下快速刷课，Edge浏览器同理</summary>
+    
+    
+    
+    <category term="tutorial" scheme="https://dekrt.cn/categories/tutorial/"/>
+    
+    
+    <category term="教程 | tutorial" scheme="https://dekrt.cn/tags/%E6%95%99%E7%A8%8B-tutorial/"/>
+    
+  </entry>
   
   <entry>
     <title>课本pdf互助站</title>
@@ -434,27 +455,6 @@
     <category term="答案 | answer" scheme="https://dekrt.cn/tags/%E7%AD%94%E6%A1%88-answer/"/>
     
     <category term="作业 | assignment" scheme="https://dekrt.cn/tags/%E4%BD%9C%E4%B8%9A-assignment/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一篇介绍 | A Introduction</title>
-    <link href="https://dekrt.cn/introduction/Introduction/"/>
-    <id>https://dekrt.cn/introduction/Introduction/</id>
-    <published>2022-01-13T04:14:05.000Z</published>
-    <updated>2022-07-24T13:51:00.297Z</updated>
-    
-    <content type="html"><![CDATA[<h1 align="center">你好，陌生人，欢迎你！</h1><h2 id="关于我-about-me">关于我 | About me</h2><p>dekrt,就读于华中科技大学，学习软件工程，是一只小菜狗，喜欢四处水（？）</p><p>我的 <a href="https://github.com/dekrt">github</a> 和 <a href="https://www.luogu.com.cn/user/172007">洛谷</a></p><p>我的 <a href="dekrt@qq.com">e-mail</a> 和 <a href="https://qm.qq.com/cgi-bin/qm/qr?k=U24Uj5ZjOxUD6CV_uiqbH-YL0uU9U0xE&amp;noverify=0">QQ</a></p><p>其他的联系方式可以参见侧栏</p><h2 id="关于这个博客-about-this-blog">关于这个博客 | About thisblog</h2><p>我大抵有一些，想要写点什么东西的念头了。</p><p>分享技术也好，记录生活也罢，我不想让过去的日子就这么过去，他们总是要留下些什么的。</p><p>建站的过程也算遭遇了很多困难，但终究成功了</p><p>所以，你看到了这篇博客，也看到了这里。</p><h2 id="致谢-thanks">致谢 | Thanks</h2><p>感谢我的同学，学长，在我迷茫困惑无助的时候给予我的帮助。</p><p>感谢我的室友陪我度过的快乐时光。</p><p>感谢我的小朋友。</p>]]></content>
-    
-    
-    <summary type="html">&lt;B&gt;你好，陌生人，欢迎你！&lt;/B&gt;</summary>
-    
-    
-    
-    <category term="introduction" scheme="https://dekrt.cn/categories/introduction/"/>
-    
-    
-    <category term="介绍 | introduction" scheme="https://dekrt.cn/tags/%E4%BB%8B%E7%BB%8D-introduction/"/>
     
   </entry>
   
