@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dekrt.cn/tutorial/phy-exp/</loc>
+    <loc>https://dekrt.cn/introduction/Introduction/</loc>
     <lastmod>2023-05-02</lastmod>
   </url>
   <url>
-    <loc>https://dekrt.cn/introduction/Introduction/</loc>
+    <loc>https://dekrt.cn/tutorial/book/</loc>
+    <lastmod>2023-05-02</lastmod>
+  </url>
+  <url>
+    <loc>https://dekrt.cn/tutorial/phy-exp/</loc>
     <lastmod>2023-05-02</lastmod>
   </url>
   <url>
@@ -15,10 +19,6 @@
   <url>
     <loc>https://dekrt.cn/tutorial/maike/</loc>
     <lastmod>2023-04-14</lastmod>
-  </url>
-  <url>
-    <loc>https://dekrt.cn/tutorial/book/</loc>
-    <lastmod>2023-03-27</lastmod>
   </url>
   <url>
     <loc>https://dekrt.cn/note/discrete-math/</loc>

@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dekrt.cn/tutorial/phy-exp/</loc>
-    
-    <lastmod>2023-05-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dekrt.cn/introduction/Introduction/</loc>
     
     <lastmod>2023-05-02</lastmod>
@@ -20,7 +11,25 @@
   </url>
   
   <url>
+    <loc>https://dekrt.cn/tutorial/book/</loc>
+    
+    <lastmod>2023-05-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dekrt.cn/about/index.html</loc>
+    
+    <lastmod>2023-05-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dekrt.cn/tutorial/phy-exp/</loc>
     
     <lastmod>2023-05-02</lastmod>
     
@@ -41,15 +50,6 @@
     <loc>https://dekrt.cn/tutorial/maike/</loc>
     
     <lastmod>2023-04-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dekrt.cn/tutorial/book/</loc>
-    
-    <lastmod>2023-03-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -257,14 +257,14 @@
   </url>
   
   <url>
-    <loc>https://dekrt.cn/tags/%E6%8A%A5%E5%91%8A-report/</loc>
+    <loc>https://dekrt.cn/tags/%E6%95%99%E7%A8%8B-tutorial/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://dekrt.cn/tags/%E6%95%99%E7%A8%8B-tutorial/</loc>
+    <loc>https://dekrt.cn/tags/%E6%8A%A5%E5%91%8A-report/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -315,14 +315,14 @@
   </url>
   
   <url>
-    <loc>https://dekrt.cn/categories/report/</loc>
+    <loc>https://dekrt.cn/categories/tutorial/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://dekrt.cn/categories/tutorial/</loc>
+    <loc>https://dekrt.cn/categories/report/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
