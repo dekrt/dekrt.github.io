@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://dekrt.cn/tutorial/delicious/</loc>
+    <lastmod>2023-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://dekrt.cn/note/git/</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://dekrt.cn/tutorial/dining-hall/</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
     <loc>https://dekrt.cn/report/os-report/</loc>
     <lastmod>2023-07-26</lastmod>
   </url>
@@ -19,10 +31,6 @@
   <url>
     <loc>https://dekrt.cn/tutorial/phy-exp/</loc>
     <lastmod>2023-05-02</lastmod>
-  </url>
-  <url>
-    <loc>https://dekrt.cn/note/git/</loc>
-    <lastmod>2023-04-21</lastmod>
   </url>
   <url>
     <loc>https://dekrt.cn/tutorial/maike/</loc>
@@ -45,14 +53,6 @@
     <lastmod>2022-10-26</lastmod>
   </url>
   <url>
-    <loc>https://dekrt.cn/tutorial/delicious/</loc>
-    <lastmod>2022-08-26</lastmod>
-  </url>
-  <url>
-    <loc>https://dekrt.cn/tutorial/dining-hall/</loc>
-    <lastmod>2022-08-17</lastmod>
-  </url>
-  <url>
     <loc>https://dekrt.cn/tutorial/mooc/</loc>
     <lastmod>2022-06-02</lastmod>
   </url>
@@ -61,7 +61,7 @@
     <lastmod>2022-05-28</lastmod>
   </url>
   <url>
-    <loc>https://dekrt.cn/answer/homework/</loc>
+    <loc>https://dekrt.cn/answer/c-homework/</loc>
     <lastmod>2022-03-10</lastmod>
   </url>
   <url>
@@ -77,7 +77,7 @@
     <lastmod>2022-03-10</lastmod>
   </url>
   <url>
-    <loc>https://dekrt.cn/answer/problems/</loc>
+    <loc>https://dekrt.cn/answer/c-problems/</loc>
     <lastmod>2022-03-10</lastmod>
   </url>
   <url>
