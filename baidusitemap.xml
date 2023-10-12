@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://dekrt.cn/report/cpsd/</loc>
+    <lastmod>2023-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dekrt.cn/report/se-report/</loc>
+    <lastmod>2023-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dekrt.cn/report/os-report/</loc>
+    <lastmod>2023-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dekrt.cn/report/experiment/</loc>
+    <lastmod>2023-10-12</lastmod>
+  </url>
+  <url>
     <loc>https://dekrt.cn/tutorial/delicious/</loc>
     <lastmod>2023-08-24</lastmod>
   </url>
@@ -11,14 +27,6 @@
   <url>
     <loc>https://dekrt.cn/tutorial/dining-hall/</loc>
     <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://dekrt.cn/report/os-report/</loc>
-    <lastmod>2023-07-26</lastmod>
-  </url>
-  <url>
-    <loc>https://dekrt.cn/report/se-report/</loc>
-    <lastmod>2023-07-26</lastmod>
   </url>
   <url>
     <loc>https://dekrt.cn/introduction/Introduction/</loc>
@@ -41,16 +49,8 @@
     <lastmod>2023-03-27</lastmod>
   </url>
   <url>
-    <loc>https://dekrt.cn/report/cpsd/</loc>
-    <lastmod>2023-03-27</lastmod>
-  </url>
-  <url>
     <loc>https://dekrt.cn/answer/military/</loc>
     <lastmod>2022-12-06</lastmod>
-  </url>
-  <url>
-    <loc>https://dekrt.cn/report/experiment/</loc>
-    <lastmod>2022-10-26</lastmod>
   </url>
   <url>
     <loc>https://dekrt.cn/tutorial/mooc/</loc>

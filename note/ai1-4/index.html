@@ -149,99 +149,63 @@
 </blockquote>
 <p>从理论上来说，我们现在的模型已经可以处理任何分类问题了，接下来我们要解决的是让机器自动调整，达到我们的目的。</p>
 <p>这就要请到我们的老朋友Y与y了：</p>
-<p><img src="/note/ai1-4/pic1-4-1.png"></p>
+<p><img src="/note/ai1-4/pic1-4-1.png" alt></p>
 <span id="more"></span>
 <p>容易想到，输出值y和目标值Y越接近，机器就越准确。</p>
 <p>比如说在如下的神经网络中，将所有权重与阈值设置为0，再使用阶跃函数，是所有的输出都为1，通过设定目标值，我们可以得到如下的误差表：</p>
-<figure>
-<img src="/note/ai1-4/pic1-4-2.png" alt="神经网络">
-<figcaption aria-hidden="true">神经网络</figcaption>
-</figure>
-<figure>
-<img src="/note/ai1-4/pic1-4-3.png" alt="误差表">
-<figcaption aria-hidden="true">误差表</figcaption>
-</figure>
+<p><img src="/note/ai1-4/pic1-4-2.png" alt="神经网络"></p>
+<p><img src="/note/ai1-4/pic1-4-3.png" alt="误差表"></p>
 <p>我们定义<strong>模型误差</strong>,由如下公式计算：</p>
-<p><span class="math display">\[cost=\frac{1}{N}\sum|Y-y|\]</span></p>
-<p>误差越低，机器就越准确。在本例中，<span class="math display">\[cost=\frac{1}{4}\times(0+0+1+1)=0.5\]</span></p>
+<script type="math/tex; mode=display">cost=\frac{1}{N}\sum|Y-y|</script><p>误差越低，机器就越准确。在本例中，<script type="math/tex">cost=\frac{1}{4}\times(0+0+1+1)=0.5</script></p>
 <p>而这个结果受到模型中每一个权重和阈值的影响，这样我们就得到了一个函数，这就是损失函数：</p>
 <p>在常见的机器学习模型里，这个结果会平方一下便于计算。</p>
-<p><span class="math display">\[Cost =
-\frac{1}{2N}\sum|Y-y|^2=f(W_1,W_2,W_3,W_4,W_5,W_6,b_1,b_2,b_3)\]</span></p>
-<p>有了损失函数，我们才能给机器一个明确的目标，让损失函数越低越好，再抽象一点就是下山，下一座十维的山。机器需要在这十个方向上爬山，找到最低点。</p>
-<p><img src="/note/ai1-4/pic1-4-4.png"></p>
-<p>而我们需要找到一个算法，给机器找到下山的路，隆重介绍：<strong>梯度下降(Gradient
-Descent)</strong></p>
-<p>顾名思义，梯度下降 = 梯度 +
-下降，或者说是下楼梯。我们会先在一个变量的函数中下楼梯，然后逐渐增加到九个变量。</p>
-<p>让我们从最简单的函数开始，<span class="math inline">\(y=x^2\)</span>:</p>
+<script type="math/tex; mode=display">Cost = \frac{1}{2N}\sum|Y-y|^2=f(W_1,W_2,W_3,W_4,W_5,W_6,b_1,b_2,b_3)</script><p>有了损失函数，我们才能给机器一个明确的目标，让损失函数越低越好，再抽象一点就是下山，下一座十维的山。机器需要在这十个方向上爬山，找到最低点。</p>
+<p><img src="/note/ai1-4/pic1-4-4.png" alt></p>
+<p>而我们需要找到一个算法，给机器找到下山的路，隆重介绍：<strong>梯度下降(Gradient Descent)</strong></p>
+<p>顾名思义，梯度下降 = 梯度 + 下降，或者说是下楼梯。我们会先在一个变量的函数中下楼梯，然后逐渐增加到九个变量。</p>
+<p>让我们从最简单的函数开始，$y=x^2$:</p>
 <p>我们的目的很简单，对于任意的点都能让它自动寻路，通过调整x走到最低点，也就是y最小的地方。</p>
-<p><img src="/note/ai1-4/pic1-4-5.png"></p>
+<p><img src="/note/ai1-4/pic1-4-5.png" alt></p>
 <p>要做到这一点，我们需要掌握两件事：<strong>每一步的移动方向和移动距离</strong>。即x应该变大还是变小，变大或变小多少。</p>
 <p>容易想到，如果该点的切线斜率为负，我们应该让x变大，向右走；如果该点的切线斜率为正，我们应该让x变小，向左走。</p>
 <p>然后便是距离，过大会错过最低点，过小会造成较大的时间开销。我们应该做的，是让斜率和移动的距离成正比，在陡峭的地方走多点，在平缓的地方走少一点。</p>
-<p><img src="/note/ai1-4/pic1-4-6.png"></p>
+<p><img src="/note/ai1-4/pic1-4-6.png" alt></p>
 <p>而乘上的这个比例，我们称作<strong>步长</strong>，也就是我们之前提到过的<strong>学习率</strong>。</p>
 <p>现在我们增加一个变量，令：</p>
-<p><span class="math display">\[z=x^2+y^2\]</span></p>
-<p>我们可以得到一个抛物面。现在，我们想让一个小球自由调整x和y，让它走到最低点。</p>
-<p><img src="/note/ai1-4/pic1-4-7.png"></p>
+<script type="math/tex; mode=display">z=x^2+y^2</script><p>我们可以得到一个抛物面。现在，我们想让一个小球自由调整x和y，让它走到最低点。</p>
+<p><img src="/note/ai1-4/pic1-4-7.png" alt></p>
 <p>沿用刚才的方法，我们需要找到让z下降最快的大小和方向。我们可以拆解一下这个问题：先让小球分别在x方向和y方向上进行下降：</p>
-<p><img src="/note/ai1-4/pic1-4-8.png"></p>
+<p><img src="/note/ai1-4/pic1-4-8.png" alt></p>
 <p>然后将两个方向进行合成。</p>
-<p><img src="/note/ai1-4/pic1-4-9.png"></p>
+<p><img src="/note/ai1-4/pic1-4-9.png" alt></p>
 <p>就可以让小球下降到最低点。</p>
-<p><img src="/note/ai1-4/pic1-4-10.png"></p>
+<p><img src="/note/ai1-4/pic1-4-10.png" alt></p>
 <p>在这个过程中，<strong>求导</strong>始终是十分关键的一步，因为导数意为着斜率，即我们的移动方向。</p>
 <p>回到我们最开始的问题：我们需要做的，就是求出损失值C对这九个变量的偏导数，让误差值越来越低。</p>
-<p><img src="/note/ai1-4/pic1-4-11.png"></p>
+<p><img src="/note/ai1-4/pic1-4-11.png" alt></p>
 <p>现在，我们只差最后一步了。</p>
 <p>如果要求损失函数对九个变量的偏导数，我们首先需要做一些准备工作：</p>
 <p>我们可以先给权重和阈值随便设置一下初始值，再来考虑激活函数：</p>
-<p><img src="/note/ai1-4/pic1-5-2.png"></p>
+<p><img src="/note/ai1-4/pic1-5-2.png" alt></p>
 <p>注意：这里不能采用阶跃函数：因为阶跃函数除了原点不可导，其他点的导数为0，无法做梯度下降。我们暂时采用逻辑函数：</p>
-<p><span class="math display">\[\sigma (x)=\frac{1}{1+e^{-x}}
-\]</span></p>
-<p>给定一组输入(1,0)我们就可以填出图中所有的空，并且可以算出他的损失值：</p>
-<p><img src="/note/ai1-4/pic1-5-3.png"></p>
-<p>这个过程，我们称之为<strong>前向传播(Forward
-Propagation)</strong>,即从左往右将训练送入网络以获得激励响应。</p>
-<p>与之类似，我们有<strong>反向传播(Backward
-Propagation)</strong>，即“误差反向传播”的简称，该方法对网络中所有函数计算损失函数的梯度，这个梯度会反馈给最优化方法，用来更新权值以最小化损失函数。</p>
+<script type="math/tex; mode=display">\sigma (x)=\frac{1}{1+e^{-x}}</script><p>给定一组输入(1,0)我们就可以填出图中所有的空，并且可以算出他的损失值：</p>
+<p><img src="/note/ai1-4/pic1-5-3.png" alt></p>
+<p>这个过程，我们称之为<strong>前向传播(Forward Propagation)</strong>,即从左往右将训练送入网络以获得激励响应。</p>
+<p>与之类似，我们有<strong>反向传播(Backward Propagation)</strong>，即“误差反向传播”的简称，该方法对网络中所有函数计算损失函数的梯度，这个梯度会反馈给最优化方法，用来更新权值以最小化损失函数。</p>
 <p>从图上来看，就是从损失值C出发来推算W和b要改变的量。具体的做法就是在九个变量上做梯度下降，即求C对九个变量的<strong>偏导数</strong>。</p>
-<p><img src="/note/ai1-4/pic1-5-4.png"></p>
+<p><img src="/note/ai1-4/pic1-5-4.png" alt></p>
 <p>这就需要用到<strong>链式法则</strong>来求复合函数的导数。</p>
-<p><span class="math display">\[\dfrac{\partial C}{\partial
-b_3}=\dfrac{dc}{dy}\dfrac{dy}{dz_3}\dfrac{\partial z_3}{\partial
-b_3}\]</span></p>
-<p>注意到：</p>
-<p><span class="math display">\[c=\frac{1}{2N}\sum|Y-y|^2=\frac{1}{2}(Y-y)^2\]</span></p>
-<p>有：</p>
-<p><span class="math display">\[\dfrac{dc}{dy}=\frac{1}{2}\times
-(-2)\times (Y-y) =0.84-1=-0.16\]</span></p>
-<p><span class="math display">\[\frac{dy}{dz_3}=\frac{d(sigmoid(z_3))}{d(z_3)}=y(1-y)=0.84\times
-(1-0.84) = 0.13\]</span></p>
-<p>而：</p>
-<p><span class="math display">\[z_3 = h_1 \times w_5 + h_2 \times w_6 +
-b_3\]</span></p>
-<p>求偏导数得：</p>
-<p><span class="math display">\[\dfrac{\partial z_3}{\partial
-b_3}=1\]</span></p>
-<p>综合得:</p>
-<p><span class="math display">\[\dfrac{\partial C}{\partial
-b_3}=\dfrac{dc}{dy}\dfrac{dy}{dz_3}\dfrac{\partial z_3}{\partial
-b_3}=-0.16\times 0.13 \times 1 = -0.020\]</span></p>
-<p>同理：我们可以计算出其他得偏导数。</p>
+<script type="math/tex; mode=display">\dfrac{\partial C}{\partial b_3}=\dfrac{dc}{dy}\dfrac{dy}{dz_3}\dfrac{\partial z_3}{\partial b_3}</script><p>注意到：</p>
+<script type="math/tex; mode=display">c=\frac{1}{2N}\sum|Y-y|^2=\frac{1}{2}(Y-y)^2</script><p>有：</p>
+<script type="math/tex; mode=display">\dfrac{dc}{dy}=\frac{1}{2}\times (-2)\times (Y-y) =0.84-1=-0.16</script><script type="math/tex; mode=display">\frac{dy}{dz_3}=\frac{d(sigmoid(z_3))}{d(z_3)}=y(1-y)=0.84\times (1-0.84) = 0.13</script><p>而：</p>
+<script type="math/tex; mode=display">z_3 = h_1 \times w_5 + h_2 \times w_6 + b_3</script><p>求偏导数得：</p>
+<script type="math/tex; mode=display">\dfrac{\partial z_3}{\partial b_3}=1</script><p>综合得:</p>
+<script type="math/tex; mode=display">\dfrac{\partial C}{\partial b_3}=\dfrac{dc}{dy}\dfrac{dy}{dz_3}\dfrac{\partial z_3}{\partial b_3}=-0.16\times 0.13 \times 1 = -0.020</script><p>同理：我们可以计算出其他得偏导数。</p>
 <p>举个例子：</p>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
 \begin{aligned}
-\dfrac{\partial C}{\partial
-w_1}&amp;=\dfrac{dc}{dy}\dfrac{dy}{dz_3}\dfrac{\partial z_3}{\partial
-h_1}\dfrac{\partial h_1}{\partial z_1}\dfrac{\partial z_1}{\partial
-w_1}\\&amp;=-0.16\times0.13\times0.50\times0.21\times1\\&amp;=-0.002    
-\end{aligned}
-\]</span></p>
-<p>而求完这九个偏导数，注意到我们只完成了一个数据点。</p>
+\dfrac{\partial C}{\partial w_1}&=\dfrac{dc}{dy}\dfrac{dy}{dz_3}\dfrac{\partial z_3}{\partial h_1}\dfrac{\partial h_1}{\partial z_1}\dfrac{\partial z_1}{\partial w_1}\\&=-0.16\times0.13\times0.50\times0.21\times1\\&=-0.002    
+\end{aligned}</script><p>而求完这九个偏导数，注意到我们只完成了一个数据点。</p>
 <p>处理完四个点之后，我们需要给每个变量得偏导数<strong>求平均</strong>，再<strong>乘上步长</strong>，这就是一次迭代中这个变量应该改变的量，也可以让四个例子的结果更为准确。</p>
 </article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">dekrt</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://dekrt.cn/note/ai1-4/">https://dekrt.cn/note/ai1-4/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dekrt.cn" target="_blank">dekrt's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-ai/">人工智能 | ai</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0-note/">笔记 | note</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2022/03/10/bhIVYT.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="/img/wechatpay.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/note/ai1-5/"><img class="prev-cover" src="https://s1.ax1x.com/2022/03/10/bhImpF.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">5 识别图像</div></div></a></div><div class="next-post pull-right"><a href="/note/ai1-3/"><img class="next-cover" src="https://s1.ax1x.com/2022/03/10/bhIkT0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">3 加一层</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/note/ai1-6/" title="6 识别语言"><img class="cover" src="https://s1.ax1x.com/2022/03/10/bhcBTg.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-17</div><div class="title">6 识别语言</div></div></a></div><div><a href="/note/ai1-5/" title="5 识别图像"><img class="cover" src="https://s1.ax1x.com/2022/03/10/bhImpF.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-14</div><div class="title">5 识别图像</div></div></a></div><div><a href="/note/ai1-3/" title="3 加一层"><img class="cover" src="https://s1.ax1x.com/2022/03/10/bhIkT0.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-10</div><div class="title">3 加一层</div></div></a></div><div><a href="/note/ai1-2.5/" title="2.5 一点点矩阵"><img class="cover" src="https://s1.ax1x.com/2022/03/10/bhInl4.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-10</div><div class="title">2.5 一点点矩阵</div></div></a></div><div><a href="/note/ai1-2/" title="2 鳄鱼与蛇"><img class="cover" src="https://s1.ax1x.com/2022/03/10/bhIEkV.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-10</div><div class="title">2 鳄鱼与蛇</div></div></a></div><div><a href="/note/ai1-1/" title="1 一点点人工智能"><img class="cover" src="https://s1.ax1x.com/2022/03/10/bhIFwq.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-10</div><div class="title">1 一点点人工智能</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s1.ax1x.com/2023/04/14/ppzvSxK.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">dekrt</div><div class="author-info__description">write something casually</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/dekrt"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/dekrt" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:dekrt@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://weibo.com/dekrt" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://twitter.com/dekrt2" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://instagram.com/dekrt" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">菜菜，呜呜，捞捞</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/report/se-report/" title="软件工程课程设计 &amp; 理论课实验报告"><img src="https://s1.ax1x.com/2023/07/26/pCjsWb4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软件工程课程设计 &amp; 理论课实验报告"/></a><div class="content"><a class="title" href="/report/se-report/" title="软件工程课程设计 &amp; 理论课实验报告">软件工程课程设计 &amp; 理论课实验报告</a><time datetime="2023-07-18T03:09:40.000Z" title="发表于 2023-07-18 11:09:40">2023-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/report/os-report/" title="操作系统实验报告&amp;课程设计"><img src="https://s1.ax1x.com/2023/07/26/pCjs4a9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统实验报告&amp;课程设计"/></a><div class="content"><a class="title" href="/report/os-report/" title="操作系统实验报告&amp;课程设计">操作系统实验报告&amp;课程设计</a><time datetime="2023-07-12T03:43:44.000Z" title="发表于 2023-07-12 11:43:44">2023-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/tutorial/maike/" title="安全教育刷课教程"><img src="https://s1.ax1x.com/2023/04/14/ppzT0Vx.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安全教育刷课教程"/></a><div class="content"><a class="title" href="/tutorial/maike/" title="安全教育刷课教程">安全教育刷课教程</a><time datetime="2023-04-14T08:04:24.000Z" title="发表于 2023-04-14 16:04:24">2023-04-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/tutorial/book/" title="课本pdf互助站"><img src="https://s1.ax1x.com/2023/03/27/ppyNdwq.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="课本pdf互助站"/></a><div class="content"><a class="title" href="/tutorial/book/" title="课本pdf互助站">课本pdf互助站</a><time datetime="2023-03-27T13:23:13.000Z" title="发表于 2023-03-27 21:23:13">2023-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/report/cpsd/" title="软件设计综合实践实验报告"><img src="https://s1.ax1x.com/2023/03/14/pplXRSO.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软件设计综合实践实验报告"/></a><div class="content"><a class="title" href="/report/cpsd/" title="软件设计综合实践实验报告">软件设计综合实践实验报告</a><time datetime="2023-03-14T10:17:46.000Z" title="发表于 2023-03-14 18:17:46">2023-03-14</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://s1.ax1x.com/2022/03/10/bhIVYT.png')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By dekrt</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">你是宇宙中恰好相遇的浪漫</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
