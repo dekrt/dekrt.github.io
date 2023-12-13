@@ -4,7 +4,16 @@
   <url>
     <loc>https://dekrt.cn/report/ccd/</loc>
     
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dekrt.cn/introduction/Introduction/</loc>
+    
+    <lastmod>2023-12-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -68,15 +77,6 @@
     <loc>https://dekrt.cn/tutorial/dining-hall/</loc>
     
     <lastmod>2023-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dekrt.cn/introduction/Introduction/</loc>
-    
-    <lastmod>2023-05-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -256,7 +256,7 @@
 
   <url>
     <loc>https://dekrt.cn/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -264,63 +264,63 @@
   
   <url>
     <loc>https://dekrt.cn/tags/%E4%BB%8B%E7%BB%8D-introduction/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-ai/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/tags/%E7%AC%94%E8%AE%B0-note/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/tags/%E6%95%99%E7%A8%8B-tutorial/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/tags/%E7%AD%94%E6%A1%88-answer/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/tags/%E4%BD%9C%E4%B8%9A-assignment/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/tags/%E6%8A%A5%E5%91%8A-report/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/tags/git/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/tags/%E8%84%9A%E6%9C%AC-script/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -329,35 +329,35 @@
   
   <url>
     <loc>https://dekrt.cn/categories/introduction/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/categories/note/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/categories/tutorial/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/categories/answer/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dekrt.cn/categories/report/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

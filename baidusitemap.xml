@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dekrt.cn/report/ccd/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://dekrt.cn/introduction/Introduction/</loc>
+    <lastmod>2023-12-13</lastmod>
   </url>
   <url>
     <loc>https://dekrt.cn/report/cpsd/</loc>
@@ -31,10 +35,6 @@
   <url>
     <loc>https://dekrt.cn/tutorial/dining-hall/</loc>
     <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://dekrt.cn/introduction/Introduction/</loc>
-    <lastmod>2023-05-02</lastmod>
   </url>
   <url>
     <loc>https://dekrt.cn/tutorial/book/</loc>
