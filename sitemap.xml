@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dekrt.cn/report/microcomputer/</loc>
+    
+    <lastmod>2024-02-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dekrt.cn/report/math-modeling/</loc>
     
     <lastmod>2024-02-09</lastmod>
@@ -272,13 +281,6 @@
 
   
   <url>
-    <loc>https://dekrt.cn/tags/%E4%BB%8B%E7%BB%8D-introduction/</loc>
-    <lastmod>2024-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dekrt.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-ai/</loc>
     <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -293,7 +295,7 @@
   </url>
   
   <url>
-    <loc>https://dekrt.cn/tags/%E6%95%99%E7%A8%8B-tutorial/</loc>
+    <loc>https://dekrt.cn/tags/%E4%BB%8B%E7%BB%8D-introduction/</loc>
     <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -308,6 +310,13 @@
   
   <url>
     <loc>https://dekrt.cn/tags/%E4%BD%9C%E4%B8%9A-assignment/</loc>
+    <lastmod>2024-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dekrt.cn/tags/%E6%95%99%E7%A8%8B-tutorial/</loc>
     <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -337,13 +346,6 @@
 
   
   <url>
-    <loc>https://dekrt.cn/categories/introduction/</loc>
-    <lastmod>2024-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dekrt.cn/categories/note/</loc>
     <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -351,7 +353,7 @@
   </url>
   
   <url>
-    <loc>https://dekrt.cn/categories/tutorial/</loc>
+    <loc>https://dekrt.cn/categories/introduction/</loc>
     <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -359,6 +361,13 @@
   
   <url>
     <loc>https://dekrt.cn/categories/answer/</loc>
+    <lastmod>2024-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dekrt.cn/categories/tutorial/</loc>
     <lastmod>2024-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
