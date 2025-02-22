@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://dekrt.cn/introduction/Introduction/</loc>
+    <lastmod>2025-02-22</lastmod>
+  </url>
+  <url>
+    <loc>https://dekrt.cn/tutorial/phy-exp/</loc>
+    <lastmod>2025-02-22</lastmod>
+  </url>
+  <url>
     <loc>https://dekrt.cn/report/IntroToAI/</loc>
     <lastmod>2024-02-24</lastmod>
   </url>
@@ -19,10 +27,6 @@
   <url>
     <loc>https://dekrt.cn/report/ccd/</loc>
     <lastmod>2024-02-01</lastmod>
-  </url>
-  <url>
-    <loc>https://dekrt.cn/introduction/Introduction/</loc>
-    <lastmod>2023-12-13</lastmod>
   </url>
   <url>
     <loc>https://dekrt.cn/report/cpsd/</loc>
@@ -54,10 +58,6 @@
   </url>
   <url>
     <loc>https://dekrt.cn/tutorial/book/</loc>
-    <lastmod>2023-05-02</lastmod>
-  </url>
-  <url>
-    <loc>https://dekrt.cn/tutorial/phy-exp/</loc>
     <lastmod>2023-05-02</lastmod>
   </url>
   <url>
